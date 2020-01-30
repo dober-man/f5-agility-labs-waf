@@ -1,4 +1,4 @@
-Module 2: Viewing and Manipulating the Rest API via curl 
+Module 2: Policy testing 
 ========================================================
 
 Expected time to complete: **1 hours**

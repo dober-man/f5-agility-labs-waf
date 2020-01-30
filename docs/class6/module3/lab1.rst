@@ -91,10 +91,14 @@ question - why did the request to http://10.1.10.150/ftp/packages.json was block
 Reviewing policy suggestions in the GIT repo  
 ---------------------------------------------
 
-
+The pipeline performs the following steps:
+1. sends trusted traffic 
+2. check if trusted traffic is blocked 
+3. if trusted traffic is blocked, use the BIGIP API to get policy suggestions (from policy builder) 
+4. push the updated policy declaration with the new suggestions to a new git branch (dev)
 
 
 What's Next?
 
-:doc:`Apply WAF Policy Suggestions <../lab2/lab*>`
+:doc:`Apply WAF Policy Suggestions <lab2>`
 

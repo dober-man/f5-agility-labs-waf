@@ -1,4 +1,4 @@
-Module 1: Ansible 
+Module 1: Policy templte 
 ===================================================
 Expected time to complete: **1 hours**
 

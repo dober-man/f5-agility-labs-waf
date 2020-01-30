@@ -1,15 +1,21 @@
-Class 6: ASM 342 - WAF Programmability
+Class 6: AWAF class 6 - WAF in a CI/CD pipeline 
 ======================================
 
-Welcome to F5's Agility Labs, 2018 edition! This class will focus on how to interact with ASM using the REST API, demonstrating  how the API can be used to help with daily tasks and improve security.
+Welcome to F5's Agility Labs, 2020 edition! This class will focus on how to integrate F5 AWAF inside a CI/CD pipeline. 
 
-The goal of this class to help students become familar with the iControl Rest API as it is related to ASM. It takes the student from little or no knowledge demostrating to the students the concepts and tools to get started, as well as some more complex examples written in Python.
+By the end of this lab you should be able to:
+1. Create an AWAF template
+2. Properly test the template 
+3. Enable SRE's to deploy applicaitons using your template 
+4. Enable SRE's to make custom changes 
 
-This is the 4th 4-hour class focused on ASM. The other 3 classes are based on
+In order to successfully complete the lab you should have a basic understanding of some of the DevOps methodologies and tools,
+|Source Control Management (SCM)|, |Infrastructure as Code (IaC)|, |ChatOps| and |Continuos Integration/Continuos Deployment (CI/CD)|.
 
-`Succeeding with Application Security <https://support.f5.com/csp/article/K07359270>`_
 
-Here is a complete listing of all ASM classes offered at this years agility.
+This is the 4th class focused on AWAF. The other 3 classes are based on
+
+Here is a complete listing of all AWAF classes offered at this years agility.
 
 ASM141 - Good WAF Security - Getting started with ASM
 
@@ -17,7 +23,6 @@ ASM241 - Elevated WAF Security - Elevating ASM Protection
 
 ASM341 - High and Maximum WAF Security - Maximizing ASM Protection
 
-ASM342 - WAF Programmability - Enhancing ASM Security and Manageability
 
 
 .. toctree::
@@ -28,3 +33,10 @@ ASM342 - WAF Programmability - Enhancing ASM Security and Manageability
    labinfo/lab*
    module*/module*
  
+ .. |GitLab| raw:: html
+
+    <a href="https://about.gitlab.com" target="_blank">GitLab</a>
+
+.. |OWASP Juice-Shop| raw:: html
+
+    <a href="https://www.owasp.org/index.php/OWASP_Juice_Shop_Project" target="_blank">OWASP Juice-Shop</a>

@@ -24,12 +24,10 @@ Linux client (client01):
 
 * Api Tools: (Only used in 342 Programmability class)
 
- * `Ansible <https://www.ansible.com/>`_ - Automation platform
  * `curl <https://curl.haxx.se/>`_ - command line webclient, will be used to interact with the iControl Rest API
  * `Postman <https://www.getpostman.com/>`_ - Graphical based Restful Client, will be used to interact with the iControl Rest API
- * `python <https://www.python.org/>`_ - general programming language used to interact with the iControl Rest API 
 
-Linux server (server01): (Only used in 141,241,341 classes)
+Linux server (server01): 
 
 * `WebGoat 8 <https://github.com/WebGoat/WebGoat/wiki>`_ - deliberately insecure web application
 
