@@ -17,7 +17,7 @@ Expected time to complete: **20 minutes**
    :maxdepth: 1
    :glob:
 
-   lab*/lab*
+   lab*
    review
 
 
