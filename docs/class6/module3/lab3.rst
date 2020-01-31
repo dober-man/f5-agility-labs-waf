@@ -1,16 +1,11 @@
-Deploy Juice-shop Web App to Production ENV and run DAST
+Lab 3.3: Deploy Juice-shop Web App to Production ENV and run DAST
 ========================================================
 
 .. _lab3:
 
-Production Pipeline
--------------------
 
-.. image:: images/pipeline_prod.png
-
-
-Deploy Juice-Shop App to Production and run DAST
-------------------------------------------------
+3.3.1 Deploy Juice-Shop App to Production
+------------------------------------
 
 Production deployment is triggered by creating a Tag. 
 This is a common development practice that allows tagging and simultaneous release/delivery of the App code into Production environment.
@@ -35,6 +30,9 @@ More on tagging at |git|
 
             <a href="https://dev.to/mostlyjason/intro-to-deployment-strategies-blue-green-canary-and-more-3a3" target="_blank">Intro to deployment strategies</a>
 
+3.3.2 Tag the repo
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Navigate to :guilabel:`Repository` -> :guilabel:`Tags` and click on :guilabel:`New tag`
 
 
@@ -45,29 +43,19 @@ Fill out a **Tag name** field and click on :guilabel:`Create tag`. You can use *
 .. image:: images/new_tag.png
 
 
-Pipeline progress
------------------
+3.3.3 Pipeline progress
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Navigate to :guilabel:`CI / CD` -> :guilabel:`Pipelines` and click on the pipeline that is currently running and has a **Commit** message set to a Tag name created in previous step
 
 
-.. image:: ../../_static/prod_pipeline.png
+.. image:: images/prod_pipeline.png
 
-Connect to Production Juice-Shop App
-------------------------------------
+3.3.4 Connect to Production Juice-Shop App
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In UDF navigate to :guilabel:`AdvancedWAF` -> :guilabel:`ACCESS` -> :guilabel:`JUICE SHOP PROD`
-This will open a welcome page of the App:
+Upon successful pipeline completion you can access Juice-Shop App by selecting :guilabel:`firefox` --> :guilabel:`favorites` --> :guilabel:`WAF-342` --> :guilabel:`OWASP juice shop - PRODUCTION`
 
-.. image:: images/connect_prod.png
-
-OPTIONAL: Download and explore DAST report
-------------------------------------------
-
-Click on :guilabel:`DAST` Job in the pipeline and then :guilabel:`Download` to download Job artifact. 
-Report contains findings and security issues as discovered by GitLab DAST service
-
-.. image:: images/DAST.png
 
 Pipeline Summary
 ----------------
@@ -78,5 +66,3 @@ Demonstrated pipeline uses same WAF Policy for Production as it did for Staging 
  * Repeat
 
 What's Next?
-
-:doc:`Cleanup Staging ENV <lab4>`

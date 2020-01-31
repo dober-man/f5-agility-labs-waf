@@ -30,13 +30,4 @@ ASM341 - High and Maximum WAF Security - Maximizing ASM Protection
    :caption: Contents:
    :glob:
 
-   labinfo/lab*
    module*/module*
- 
- .. |GitLab| raw:: html
-
-    <a href="https://about.gitlab.com" target="_blank">GitLab</a>
-
-.. |OWASP Juice-Shop| raw:: html
-
-    <a href="https://www.owasp.org/index.php/OWASP_Juice_Shop_Project" target="_blank">OWASP Juice-Shop</a>
