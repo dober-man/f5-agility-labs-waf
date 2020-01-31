@@ -27,28 +27,22 @@ Navigate to :guilabel:`CI / CD` -> :guilabel:`Pipelines` and click on :guilabel:
 
 .. image:: images/run_pipeline.png
 
-Then click on |run|
 
-.. |run| image:: images/run_pipeline_button.png
+Then click on :guilabel:`Run pipeline`
 
+
+.. image:: images/run_pipeline_button.png
 
 
 3.1.3 Pipeline progress
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Watch the pipeline as it progresses through its stages. You can see the output of individual stage by clicking on corresponding Job in the pipeline.
-To learn more about GitLab Jobs, see |Job|
-
-.. |Job| raw:: html
-
-    <a href="https://docs.gitlab.com/ee/ci/quick_start/>Gitlab Job</a>
-
 
 It is **expected** that the pipeline will fail for the first time. This is due to the WAF Policy being too strict and not allowing a `Trusted Traffic` through.
 Click on :guilabel:`Functionality tests` Job to see more details about the failure
 
-.. note:: Functionality tests 
-          The Functionality tests job sends 3 requests to validate that WAF Policy allows for retrieval of YAML, JSON and .bak extension files, as those are used by users of the app. 
+.. note:: The Functionality tests job sends 3 requests to validate that WAF Policy allows for retrieval of YAML, JSON and .bak extension files, as those are used by users of the app. 
           Original policy uses 'POLICY_TEMPLATE_RAPID_DEPLOYMENT' template which blocks such requests if they are not included in modifications section of the policy.
 
 .. image:: images/pipeline_fail.png
@@ -82,10 +76,10 @@ AWAF generates suggestions based on the 'policy builder'.when working with AWAF 
 
 1. Open the bigip GUI :guilabel:`firefox` -> :guilabel:`bigip01`
 2. Navigate to 'traffic learning' :guilabel:`security` -> :guilabel:`application security` -> :guilabel:`policy building` -> :guilabel:`traffic learning`
-3. Verify that you are looking at 'juiceshop_waf_policy_staging' policy
-3. review the suggestions
+3. Verify that you are looking at :guilabel:`juiceshop_waf_policy_staging` policy
+4. review the suggestions
 
-question - why did the request to http://10.1.10.150/ftp/packages.json was blocked ? what is the required policy change ? 
+Question - why did the request to http://10.1.10.150/ftp/packages.json was blocked ? what is the required policy change ? 
 
 .. image:: images/policy_learning.png
 

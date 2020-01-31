@@ -1,4 +1,4 @@
-Apply WAF suggestions for trusted traffic
+Lab 3.2: Apply WAF suggestions for trusted traffic
 =========================================
 
 .. _lab2:
@@ -7,9 +7,13 @@ Apply WAF suggestions for trusted traffic
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The pipeline performs the following steps:
+
 1. sends trusted traffic 
+
 2. check if trusted traffic is blocked 
-3. if trusted traffic is blocked, use the BIGIP API to get policy suggestions (from policy builder) 
+
+3. if trusted traffic is blocked, use the BIGIP API to get policy suggestions (from policy builder)
+
 4. pushes the updated policy declaration with the new suggestions to a new git branch (dev)
 
 3.2.2 Explore the updated policy JSON
