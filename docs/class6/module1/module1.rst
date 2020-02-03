@@ -1,4 +1,4 @@
-Module 1: Policy Templte Creation on BIG-IP
+Module 1: ASM Policy Template Creation on BIG-IP
 ===================================================
 Expected time to complete: **1 hours**
 
