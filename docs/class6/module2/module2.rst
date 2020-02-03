@@ -1,87 +1,103 @@
 Module 2: Policy testing 
 ========================================================
 
-Expected time to complete: **1 hours**
+Expected time to complete: **30 minutes**
 
-**Intro**
+**f5 WAF Tester**
 
-If you have experience with another RestFul API, the F5 RestFul API will be very familiar. If you have no familiarity with a RestFul API, don't worry there are only a few key concepts to understand.
+F5 Networks Threat Research Team has created a tool that provides an easy and fast way to integrate security testing as part of the SDLC process for basic application protection health check before moving to production.
+The tool is intended to test the WAF configuration state and its provided security posture against common web attack types. The tool will send HTTP requests containing attacks and will expect to receive a WAF blocking page in the response. In case the attack vector was not blocked, the tool will read the WAF logs and its configuration to try determine possible reasons for the attack not being blocked, and suggest corresponding actions.
 
-The Rest API uses HTTP requests with a combination certain uri and HTTP verbs/commands 
-
-All queries to ASM begin with the uri /mgmt/tm/asm .
-
-For example, querying the uri /mgmt/tm/asm/policies (https://<mgmt ip>/mgmt/tm/asm/policies) will display all asm policies in JSON format.
-
-**Other URIs:**
-
-/mgmt/tm/asm (root asm configuration)
-
-/mgmt/tm/asm/signatures (lists all attack signatures that are installed)
-
-/mgmt/tm/asm/events (lists asm events)
-
-/mgmt/tm/asm/requests (lists asm requests)
-
-/mgmt/tm/asm/policies/MrLpFzRHNarvj_zuAOD0fw (Whoa what is this? Its a way of accessing a policy directly. We will investigate this in detail later.)
-
-HTTP uses commands/verbs such as POST, GET, etc. What roles do they play? HTTP commands determine the operation/type of the request. In other words whether data is simply retrieved or created/modified.
+**Disclaimer**: The tool is not testing whether the application itself is vulnerable and also tests only a subset of attacks. The tool tries to test the WAF security policy level, and is not a replacement for a vulnerability scanner assessment.
 
 |
-|
+**Installation**
 
-.. list-table:: HTTP Method Uses
-   :widths: 15 45
-   :header-rows: 1
+1. This tool runs on a linux based host and requires Python 2.7+.  
 
-   * - METHOD
-     - RESULT 
-   * - GET
-     - retrieves configuration properties or run-time statistics on the resource specified by the URI in the request 
-   * - PATCH
-     - modifies only the properties of the resource specified in the URI
-   * - PUT 
-     - modifies the properties of the resource specified in the URI and sets the remaining properties to either default values or empty values
-   * - POST
-     - creates a new resource based on the URI (eg new ASM policy)     
-   * - DELETE
-     - deletes a resource based on the URI (eg delete an ASM policy) *Note: this method only takes a URI as an option*
+  a. To install Python:
+      Ubuntu/Kali -  sudo apt-get install -y python-pip
+      Fedora - sudo dnf install -y python-pip
 
-|
-|
+2. Once Python is installed, install the tool using the following command:
 
-.. list-table:: HTTP Method Use Cases
-                :widths: 15 10 15
-                :header-rows: 1
+      pip install git+https://github.com/f5devcentral/f5-waf-tester.git
 
-                * - USE CASE
-                  - METHOD
-                  - Example
-                * - Create a new asm policy 
-                  - POST
-                  - curl -sk -u admin:password -X POST https://<bigip>/mgmt/tm/asm/policies -d '{"name":<policyName>}'
-                * - View the settings of the new asm policy
-                  - GET
-                  - curl -sk -u admin:password -X GET https://<bigip>/mgmt/tm/asm/policies
-                * - Add a whitelist ip to the new APM policy
-                  - POST
-                  - curl -sk -u admin:password -X POST https://<bigip>/mgmt/tm/asm/policies/<policyId>/whitelist-ips -H "Content-Type: application/json" -d '{"ipAddress":"<whitelist ip>", "ipMask":"<netmask>"}'
-                * - Enable the "Policy Builder trusted IP" settings for the whitelist IP (by default disabled), leaving all other whitelist settings alone 
-                  - PATCH
-                  - curl -sk -u admin:password -X PATCH https://<bigip>/mgmt/tm/asm/policies/<policyId>/whitelist-ips/<whitelistIpId> -H “Content-Type: application/json” -d '{"trustedByPolicyBuilder":"true"}'
-                * - Delete a policy 
-		  - DELETE
-		  - curl -sk -u admin:password -X DELETE https://<bigip>/mgmt/tm/asm/policies/<policyId> -H “Content-Type: application/json”
-                * - Delete a whitelist ip from policy
-                  - DELETE
-                  - curl -sk -u admin:password -X DELETE https://<bigip>/mgmt/tm/asm/policies/<policyId>/whitelist-ips/<whitelistIpId> -H “Content-Type: application/json”
+**How to Use**
 
-Topics:
+1.	Create a configuration file for the first time by going to directory /home/f5student/.local/bin, and executing:
 
-.. toctree::
-   :maxdepth: 1
-   :glob:
+      ./f5-waf-tester –init
 
-   lab*/lab*
-   review
-   lab*/answer*
+	  This will run you through a wizard where you will populate:
+
+[BIG-IP] Host []: - 10.1.1.4
+This is the management IP of the Big-IP that is securing your application.
+
+[BIG-IP] Username []: admin
+Username of an account that can log into the Big-IP. (Can be a guest account)
+
+[BIG-IP] Password []: f5DEMOs4u!
+Password that is tied to the username above.
+ASM Policy Name []: owasptop10_secops_test
+Name of the policy that is tied to the virtual server of the application you are testing.
+
+Virtual Server URL []: http://10.1.10.150 
+URL of the virtual server that services the application you are testing. 
+
+For this lab take the defaults for the rest of the prompts (See Appendix A for an explanation of the other features).  If you want to see the configuration file, it can be found here: /home/f5student/.local/lib/python2.7/site-packages/f5_waf_tester/config/config.json 
+You can also get there by typing:
+	Cd ~/.local/lib/python2.7/site-packages/f5_waf_tester/config/config.json
+
+2.	You can now run the tool by issuing:
+
+./f5-waf-tester
+
+The results of the tests will be displayed on the CLI and also saved to "report.json" under the current folder. Test results will give you information of the attack type that was executed, name of the attack, what protection it was testing (signature, evasion, or violation) along with a pass or fail verdict. If the protection is a signature, it will show the signature ID; if an evasion, it will show the evasion name; if a violation, it will show the violation name.  If the attack passes, you will get the support ID of the block page.  If the attack fails, you will get information of why it failed so you can make policy changes.  At the end it will show the summary and provide total number of passed/failed tests:
+
+Attack information:
+      	"attack_type": "Insecure Deserialization", 
+      	"name": "Insecure Deserialization - node.js", 
+      	"results": {
+        		"header": {
+          			"expected_result": {
+            				"type": "signature", 
+            				"value": "200004283”
+
+Failed test:
+          	"pass": false, 
+          	"reason": "ASM Policy is not in blocking mode", 
+          	"support_id": ""
+
+Passed test:
+"pass": true, 
+          	"reason": "", 
+          	"support_id": "4469169378524397882"
+
+Summary:
+"summary": {
+    		"fail": 30, 
+    		"pass": 18
+
+3.	Open the report and look to see what is failing.
+a.	One way to do this:
+i.	Vi report.json
+ii.	 Search for the failed results by looking for the term “false”.
+1.	Type: /false
+iii.	Look to see why the attack was not blocked by looking for the term “reason”
+b.	Another way:
+i.	cat report.json | jq .details[] | jq '.results[] | .expected_result.value, .pass, .reason’
+ii.	look for a result of “false” and why it did not pass
+4.	Modify Policy named owasptop10_secops_test (change staging, enable signatures) 
+a.	Enable appropriate signatures
+b.	Turn Staging off
+c.	Enable appropriate violations
+d.	Enable appropriate evasions
+5.	Run the f5 WAF tester again to make sure all attacks are stopped.
+6.	Update the Security Template with the new settings:
+a.	Go to Security -> Options -> Application Security -> Advanced Configuration -> Policy Templates.
+b.	Click on owasptop10 template
+c.	Under the Template File line, choose “Use existing security policy” and select the policy you just modified.
+d.	Click Update.
+
+
