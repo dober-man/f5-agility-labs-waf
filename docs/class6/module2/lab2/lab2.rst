@@ -71,8 +71,11 @@ Summary:
 3.	Open the report and look to see what is failing.
 
 	a.	One way to do this:
+		Type
 
-		1.	vi report.json
+		.. code-block:: bash
+
+			vi report.json
 
 		2.	 Search for the failed results by looking for the term “false”.
 
@@ -83,7 +86,7 @@ Summary:
 				/false
 
 		3.	Look to see why the attack was not blocked by looking for the term “reason”
-	b.	Another way:
+	b.	Another way to see passed and failed attacks:
 
 		Type
 
