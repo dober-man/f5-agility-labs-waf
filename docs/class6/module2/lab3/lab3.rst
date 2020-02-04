@@ -85,7 +85,7 @@ When going through the configuration file prompts (./f5-waf-tester –init), the
                         HTTP Request Smuggling
 
                         Server Side Request Forgery
-                        
+
 
         [Filters] Test IDs to exclude (Separated by ',') []: 
                 Exclude test IDs to be run.
@@ -98,16 +98,27 @@ When going through the configuration file prompts (./f5-waf-tester –init), the
 
 Here are the possible reasons that could cause the test ID to fail:
         ASM Policy is not in blocking mode
+
         Attack Signature is not in the ASM Policy
+
         Attack Signatures are not up to date
+
         Attack Signature disabled
+
         Attack Signature is in staging
+
         Parameter * is in staging
+
         URL * is in staging
+
         URL * Does not check signatures
+
         Header * Does not check signatures
+
         Evasion disabled
+
         Evasion technique is not in blocking mode
+        
         Violation disabled
 
 .. toctree::
