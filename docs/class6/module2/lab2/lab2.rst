@@ -77,7 +77,7 @@ Summary:
 	c.	Enable appropriate violations
 	d.	Enable appropriate evasions
 5.	Run the f5 WAF tester again to make sure all attacks are stopped.
-6.	Update the Security Template with the new settings:
+6.	Update the Security Template with the new settings.
 	a.	Go to Security -> Options -> Application Security -> Advanced Configuration -> Policy Templates.
 	b.	Click on owasptop10 template
 	c.	Under the Template File line, choose “Use existing security policy” and select the policy you just modified.
