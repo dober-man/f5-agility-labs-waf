@@ -52,11 +52,11 @@ Failed test:
           	"reason": "ASM Policy is not in blocking mode", 
           	"support_id": ""
 Passed test:
-"pass": true, 
+		"pass": true, 
           	"reason": "", 
           	"support_id": "4469169378524397882"
 Summary:
-"summary": {
+		"summary": {
     		"fail": 30, 
     		"pass": 18
 
