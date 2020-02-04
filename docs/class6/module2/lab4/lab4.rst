@@ -18,6 +18,7 @@ Appendix B: Matrix of all f5 WAF Tester Attacks
      - Signature
      - 200000097
    * - 100000002		
+     - XSS
      - HTML Attribute Injection - onmouseover	
      - All Systems	
      - Signature	
