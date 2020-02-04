@@ -14,7 +14,5 @@ The tool is intended to test the WAF configuration state and its provided securi
    :maxdepth: 1
    :glob:
 
-   lab1/lab1
-   lab2/lab2
-   lab3/lab3
-   lab4/lab4
+   lab*
+   
