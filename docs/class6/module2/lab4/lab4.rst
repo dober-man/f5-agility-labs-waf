@@ -2,7 +2,7 @@ Appendix B: Matrix of all f5 WAF Tester Attacks
 --------------------------------------------------------------
 
 .. list-table::
-   :widths: 20 20 20 20 20 20
+   :widths: 15 15 15 15 15 15
    :header-rows: 1
 
    * - **Test ID**
@@ -43,7 +43,7 @@ Appendix B: Matrix of all f5 WAF Tester Attacks
      - Signature	
      - 200101164
 
-     
+
 100000003		JavaScript Injection - eval	All Systems	signature	200001406
 				signature	200001405
 				signature	200001404
