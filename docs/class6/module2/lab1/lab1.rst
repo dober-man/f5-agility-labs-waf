@@ -27,6 +27,7 @@ Ubuntu/Kali:
    :maxdepth: 1
    :glob:
 
-   lab2
-   lab3
-   lab4
+   lab2/lab2
+   lab3/lab3
+   lab4/lab4
+   
