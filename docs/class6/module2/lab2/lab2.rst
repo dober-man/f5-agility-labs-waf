@@ -64,9 +64,9 @@ Passed test:
 Summary:
 		"summary": {
 
-    		"fail": 30, 
+    		"fail": 39, 
 
-    		"pass": 18
+    		"pass": 9
 
 2.2.3 - Open the report and look to see what is failing.
 
@@ -96,7 +96,7 @@ Summary:
 	
 
 		2.	look for a result of “false” and why it did not pass
-2.2.4 - Modify Policy named owasptop10_secops_test (change staging, enable signatures).
+2.2.4 - Modify Policy named base_policy (change staging, enable signatures).
 
 	a.	Enable appropriate signatures
 
