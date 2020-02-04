@@ -82,3 +82,5 @@ Summary:
 	b.	Click on owasptop10 template
 	c.	Under the Template File line, choose “Use existing security policy” and select the policy you just modified.
 	d.	Click Update.
+
+	.. image:: images/policy-template.png
