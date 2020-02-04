@@ -79,7 +79,7 @@ Summary:
     		"fail": 30, 
     		"pass": 18
 
-3.	Open the report and look to see what is failing. (test)
+3.	Open the report and look to see what is failing.
 	a.	One way to do this:
 		i.	Vi report.json
 		ii.	 Search for the failed results by looking for the term “false”.
