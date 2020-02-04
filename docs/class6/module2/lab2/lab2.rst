@@ -41,7 +41,9 @@ The results of the tests will be displayed on the CLI and also saved to "report.
 
 Attack information:
       	"attack_type": "Insecure Deserialization", 
+
       	"name": "Insecure Deserialization - node.js", 
+
       	"results": {
         		"header": {
           			"expected_result": {
@@ -49,15 +51,21 @@ Attack information:
             				"value": "200004283”
 Failed test:
           	"pass": false, 
+
           	"reason": "ASM Policy is not in blocking mode", 
+
           	"support_id": ""
 Passed test:
 		"pass": true, 
+
           	"reason": "", 
+
           	"support_id": "4469169378524397882"
 Summary:
 		"summary": {
+
     		"fail": 30, 
+			
     		"pass": 18
 
 3.	Open the report and look to see what is failing.
