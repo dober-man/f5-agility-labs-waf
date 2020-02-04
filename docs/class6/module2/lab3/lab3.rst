@@ -56,21 +56,36 @@ When going through the configuration file prompts (./f5-waf-tester –init), the
 	        Specify attack types to run if you do not want to run all.  
                 
                 The options are:
-		        XSS:
-                        SQL Injection:
-                        NoSQL Injection:
-                        Command Execution:
-                        Path Traversal:
-                        Predictable Resource Location:
-                        HTTP Protocol Compliance:
-                        Detection Evasion:
-                        Insecure Deserialization 
-                        Information Leakage 
-                        JSON Parser Attack 
-                        XML Parser Attack 
-                        HTTP Parser Attack 
-                        HTTP Request Smuggling 
-                        Server Side Request Forgery 
+		        XSS
+
+                        SQL Injection
+
+                        NoSQL Injection
+
+                        Command Execution
+
+                        Path Traversal
+
+                        Predictable Resource Location
+
+                        HTTP Protocol Compliance
+
+                        Detection Evasion
+
+                        Insecure Deserialization
+
+                        Information Leakage
+
+                        JSON Parser Attack
+
+                        XML Parser Attack
+
+                        HTTP Parser Attack
+
+                        HTTP Request Smuggling
+
+                        Server Side Request Forgery
+                        
 
         [Filters] Test IDs to exclude (Separated by ',') []: 
                 Exclude test IDs to be run.
