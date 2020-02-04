@@ -1,7 +1,7 @@
 Lab 2.2: Initial Configuration of f5 WAF Tester
 ========================================================
 
-Create a configuration file for the first time by going to directory /home/f5student/.local/bin, and executing:
+2.2.1 - Create a configuration file for the first time by going to directory /home/f5student/.local/bin, and executing:
 
 .. code-block:: bash
 
@@ -31,7 +31,7 @@ You can also get there by typing:
 
 	cd ~/.local/lib/python2.7/site-packages/f5_waf_tester/config/config.json
 
-2.	You can now run the tool by issuing:
+2.2.2 - You can now run the tool by issuing:
 
 .. code-block:: bash
 
@@ -68,7 +68,7 @@ Summary:
 
     		"pass": 18
 
-3.	Open the report and look to see what is failing.
+2.2.3 - Open the report and look to see what is failing.
 
 	a.	One way to do this:
 		Type
@@ -96,7 +96,7 @@ Summary:
 	
 
 		2.	look for a result of “false” and why it did not pass
-4.	Modify Policy named owasptop10_secops_test (change staging, enable signatures).
+2.2.4 - Modify Policy named owasptop10_secops_test (change staging, enable signatures).
 
 	a.	Enable appropriate signatures
 
@@ -105,8 +105,8 @@ Summary:
 	c.	Enable appropriate violations
 
 	d.	Enable appropriate evasions
-5.	Run the f5 WAF tester again to make sure all attacks are stopped.
-6.	Update the Security Template with the new settings.
+2.2.5 -	Run the f5 WAF tester again to make sure all attacks are stopped.
+2.2.6 -	Update the Security Template with the new settings.
 
 	a.	Go to Security -> Options -> Application Security -> Advanced Configuration -> Policy Templates.
 
@@ -117,11 +117,3 @@ Summary:
 	d.	Click Update.
 
 	.. image:: images/policy-template.png
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   lab1
-   lab3
-   lab4

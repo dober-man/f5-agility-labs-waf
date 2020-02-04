@@ -2,7 +2,7 @@ Appendix B: Matrix of all f5 WAF Tester Attacks
 --------------------------------------------------------------
 
 .. list-table::
-   :widths: 20 20 20 20 20 20
+   :widths: 5 5 5 5 5 5
    :header-rows: 1
 
    * - **Test ID**
@@ -293,12 +293,3 @@ Appendix B: Matrix of all f5 WAF Tester Attacks
      - All systems	
      - Signature	
      - 200020201
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   lab1
-   lab2
-   lab3
-   

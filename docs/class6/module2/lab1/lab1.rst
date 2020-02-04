@@ -9,7 +9,7 @@ Expected time to complete **10 minutes**
 
 To install Python:
 
-2.1.1. Log into the Ubuntu jumphost, client01 (username/password f5student/f5DEMOs4u!).
+2.1.1 - Log into the Ubuntu jumphost, client01 (username/password f5student/f5DEMOs4u!).
 
 Ubuntu/Kali:
 
@@ -18,16 +18,8 @@ Ubuntu/Kali:
         sudo apt-get install -y python-pip
 
 
-2.1.2. Once Python is installed, install the tool using the following command:
+2.1.2 - Once Python is installed, install the tool using the following command:
 
 .. code-block:: bash
 
         pip install git+https://github.com/f5devcentral/f5-waf-tester.git
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   lab2/lab2
-   lab3/lab3
-   lab4/lab4
