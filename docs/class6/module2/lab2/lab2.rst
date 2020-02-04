@@ -47,7 +47,7 @@ URL of the virtual server that services the application you are testing.
 
 For this lab take the defaults for the rest of the prompts (See Appendix A for an explanation of the other features).  If you want to see the configuration file, it can be found here: /home/f5student/.local/lib/python2.7/site-packages/f5_waf_tester/config/config.json 
 You can also get there by typing:
-	Cd ~/.local/lib/python2.7/site-packages/f5_waf_tester/config/config.json
+	cd ~/.local/lib/python2.7/site-packages/f5_waf_tester/config/config.json
 
 2.	You can now run the tool by issuing:
 
@@ -80,22 +80,22 @@ Summary:
     		"pass": 18
 
 3.	Open the report and look to see what is failing.
-a.	One way to do this:
-i.	Vi report.json
-ii.	 Search for the failed results by looking for the term “false”.
-1.	Type: /false
-iii.	Look to see why the attack was not blocked by looking for the term “reason”
-b.	Another way:
-i.	cat report.json | jq .details[] | jq '.results[] | .expected_result.value, .pass, .reason’
-ii.	look for a result of “false” and why it did not pass
+	a.	One way to do this:
+		i.	Vi report.json
+		ii.	 Search for the failed results by looking for the term “false”.
+			1.	Type: /false
+		iii.	Look to see why the attack was not blocked by looking for the term “reason”
+	b.	Another way:
+		i.	cat report.json | jq .details[] | jq '.results[] | .expected_result.value, .pass, .reason’
+		ii.	look for a result of “false” and why it did not pass
 4.	Modify Policy named owasptop10_secops_test (change staging, enable signatures) 
-a.	Enable appropriate signatures
-b.	Turn Staging off
-c.	Enable appropriate violations
-d.	Enable appropriate evasions
+	a.	Enable appropriate signatures
+	b.	Turn Staging off
+	c.	Enable appropriate violations
+	d.	Enable appropriate evasions
 5.	Run the f5 WAF tester again to make sure all attacks are stopped.
 6.	Update the Security Template with the new settings:
-a.	Go to Security -> Options -> Application Security -> Advanced Configuration -> Policy Templates.
-b.	Click on owasptop10 template
-c.	Under the Template File line, choose “Use existing security policy” and select the policy you just modified.
-d.	Click Update.
+	a.	Go to Security -> Options -> Application Security -> Advanced Configuration -> Policy Templates.
+	b.	Click on owasptop10 template
+	c.	Under the Template File line, choose “Use existing security policy” and select the policy you just modified.
+	d.	Click Update.
