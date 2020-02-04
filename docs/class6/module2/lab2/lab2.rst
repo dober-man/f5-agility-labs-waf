@@ -81,7 +81,7 @@ Summary:
 
 3.	Open the report and look to see what is failing.
 	a.	One way to do this:
-		i.	Vi report.json
+		i.	vi report.json
 		ii.	 Search for the failed results by looking for the term “false”.
 			1.	Type: /false
 		iii.	Look to see why the attack was not blocked by looking for the term “reason”
