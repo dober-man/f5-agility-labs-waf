@@ -18,10 +18,10 @@ This will run you through a wizard where you will populate:
 	[BIG-IP] Password []: f5DEMOs4u!
 		Password that is tied to the username above.
 
-	ASM Policy Name []: owasptop10_secops_test
+	ASM Policy Name []: /secops_testing/waf_juiceshop_secops_testing
 		Name of the policy that is tied to the virtual server of the application you are testing.
 
-	Virtual Server URL []: http://10.1.10.150 
+	Virtual Server URL []: http://10.1.10.120 
 		URL of the virtual server that services the application you are testing. 
 
 For this lab take the defaults for the rest of the prompts (See Appendix A for an explanation of the other features).  If you want to see the configuration file, it can be found here: /home/f5student/.local/lib/python2.7/site-packages/f5_waf_tester/config/config.json 
@@ -29,7 +29,7 @@ You can also get there by typing:
 
 .. code-block:: bash
 
-	cd ~/.local/lib/python2.7/site-packages/f5_waf_tester/config/config.json
+	cat ~/.local/lib/python2.7/site-packages/f5_waf_tester/config/config.json
 
 2.2.2 - You can now run the tool by issuing:
 
