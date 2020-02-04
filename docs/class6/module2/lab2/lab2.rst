@@ -65,12 +65,22 @@ Summary:
 3.	Open the report and look to see what is failing.
 
 	a.	One way to do this:
+
 		i.	vi report.json
+
 		ii.	 Search for the failed results by looking for the term “false”.
+
 			1.	Type: /false
+
 		iii.	Look to see why the attack was not blocked by looking for the term “reason”
 	b.	Another way:
-		i.	cat report.json | jq .details[] | jq '.results[] | .expected_result.value, .pass, .reason’
+
+		Type
+
+	.. code-block:: bash
+
+		cat report.json | jq .details[] | jq '.results[] | .expected_result.value, .pass, .reason’
+	
 		ii.	look for a result of “false” and why it did not pass
 4.	Modify Policy named owasptop10_secops_test (change staging, enable signatures).
 
@@ -89,7 +99,7 @@ Summary:
 	b.	Click on owasptop10 template
 
 	c.	Under the Template File line, choose “Use existing security policy” and select the policy you just modified.
-	
+
 	d.	Click Update.
 
 	.. image:: images/policy-template.png
