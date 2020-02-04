@@ -8,7 +8,7 @@ Expected time to complete **10 minutes**
 	This tool runs on a linux based host and requires Python 2.7+.  
 
 To install Python:
-1. Log into the Ubuntu jumphost, client01 (usernamba/password f5student/f5DEMOs4u!).
+1. Log into the Ubuntu jumphost, client01 (username/password f5student/f5DEMOs4u!).
 
 Ubuntu/Kali:
 
@@ -30,4 +30,3 @@ Ubuntu/Kali:
    lab2/lab2
    lab3/lab3
    lab4/lab4
-   
