@@ -9,19 +9,19 @@ Create a configuration file for the first time by going to directory /home/f5stu
 
 This will run you through a wizard where you will populate:
 
-	[BIG-IP] Host []: - .. code-block:: bash 10.1.1.4
+	[BIG-IP] Host []: 10.1.1.4
 		This is the management IP of the Big-IP that is securing your application.
 
-	[BIG-IP] Username []: .. code-block:: bash admin
+	[BIG-IP] Username []: admin
 		Username of an account that can log into the Big-IP. (Can be a guest account)
 
-	[BIG-IP] Password []: .. code-block:: bash f5DEMOs4u!
+	[BIG-IP] Password []: f5DEMOs4u!
 		Password that is tied to the username above.
 
-	ASM Policy Name []: .. code-block:: bash owasptop10_secops_test
+	ASM Policy Name []: wasptop10_secops_test
 		Name of the policy that is tied to the virtual server of the application you are testing.
 
-	Virtual Server URL []: .. code-block:: bash http://10.1.10.150 
+	Virtual Server URL []: http://10.1.10.150 
 		URL of the virtual server that services the application you are testing. 
 
 For this lab take the defaults for the rest of the prompts (See Appendix A for an explanation of the other features).  If you want to see the configuration file, it can be found here: /home/f5student/.local/lib/python2.7/site-packages/f5_waf_tester/config/config.json 
@@ -65,7 +65,7 @@ Summary:
 		"summary": {
 
     		"fail": 30, 
-			
+
     		"pass": 18
 
 3.	Open the report and look to see what is failing.
