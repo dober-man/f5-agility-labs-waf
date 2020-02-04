@@ -79,8 +79,8 @@ Summary:
 
 		cat report.json | jq .details[] | jq '.results[] | .expected_result.value, .pass, .reason’
 	
-	
-		ii.	look for a result of “false” and why it did not pass
+
+	ii.	look for a result of “false” and why it did not pass
 4.	Modify Policy named owasptop10_secops_test (change staging, enable signatures).
 
 	a.	Enable appropriate signatures
