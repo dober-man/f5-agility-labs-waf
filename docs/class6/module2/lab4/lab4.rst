@@ -20,7 +20,7 @@ Appendix B: Matrix of all f5 WAF Tester Attacks
    * - 100000001
      - XSS
      - HTML Tag Injection - script
-     - All Systems
+     - -
      - Signature
      - 200001088
    * - 100000001
