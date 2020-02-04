@@ -18,7 +18,7 @@ This will run you through a wizard where you will populate:
 	[BIG-IP] Password []: f5DEMOs4u!
 		Password that is tied to the username above.
 
-	ASM Policy Name []: wasptop10_secops_test
+	ASM Policy Name []: owasptop10_secops_test
 		Name of the policy that is tied to the virtual server of the application you are testing.
 
 	Virtual Server URL []: http://10.1.10.150 
