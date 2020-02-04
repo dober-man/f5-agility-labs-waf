@@ -63,6 +63,7 @@ Summary:
     		"pass": 18
 
 3.	Open the report and look to see what is failing.
+
 	a.	One way to do this:
 		i.	vi report.json
 		ii.	 Search for the failed results by looking for the term “false”.
@@ -72,15 +73,23 @@ Summary:
 		i.	cat report.json | jq .details[] | jq '.results[] | .expected_result.value, .pass, .reason’
 		ii.	look for a result of “false” and why it did not pass
 4.	Modify Policy named owasptop10_secops_test (change staging, enable signatures).
+
 	a.	Enable appropriate signatures
+
 	b.	Turn Staging off
+
 	c.	Enable appropriate violations
+
 	d.	Enable appropriate evasions
 5.	Run the f5 WAF tester again to make sure all attacks are stopped.
 6.	Update the Security Template with the new settings.
+
 	a.	Go to Security -> Options -> Application Security -> Advanced Configuration -> Policy Templates.
+
 	b.	Click on owasptop10 template
+
 	c.	Under the Template File line, choose “Use existing security policy” and select the policy you just modified.
+	
 	d.	Click Update.
 
 	.. image:: images/policy-template.png
