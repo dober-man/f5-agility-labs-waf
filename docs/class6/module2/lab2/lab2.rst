@@ -1,8 +1,6 @@
 Lab 2.2: Initial Configuration of f5 WAF Tester
 ========================================================
 
-Expected time to complete: **5 minutes**
-
 Create a configuration file for the first time by going to directory /home/f5student/.local/bin, and executing:
 
 .. code-block:: bash
