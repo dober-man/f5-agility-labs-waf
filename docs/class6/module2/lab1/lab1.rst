@@ -8,7 +8,8 @@ Expected time to complete **10 minutes**
 	This tool runs on a linux based host and requires Python 2.7+.  
 
 To install Python:
-1. Log into the Ubuntu jumphost, client01 (username/password f5student/f5DEMOs4u!).
+
+2.1.1. Log into the Ubuntu jumphost, client01 (username/password f5student/f5DEMOs4u!).
 
 Ubuntu/Kali:
 
@@ -17,7 +18,7 @@ Ubuntu/Kali:
         sudo apt-get install -y python-pip
 
 
-2. Once Python is installed, install the tool using the following command:
+2.1.2. Once Python is installed, install the tool using the following command:
 
 .. code-block:: bash
 
