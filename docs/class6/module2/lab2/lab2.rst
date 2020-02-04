@@ -64,13 +64,17 @@ Summary:
 
 	a.	One way to do this:
 
-		i.	vi report.json
+		1.	vi report.json
 
-		ii.	 Search for the failed results by looking for the term “false”.
+		2.	 Search for the failed results by looking for the term “false”.
 
-			1.	Type: /false
+			1.	Type: 
+			
+			.. code-block:: bash
+			
+			/false
 
-		iii.	Look to see why the attack was not blocked by looking for the term “reason”
+		3.	Look to see why the attack was not blocked by looking for the term “reason”
 	b.	Another way:
 
 		Type
@@ -80,7 +84,7 @@ Summary:
 		cat report.json | jq .details[] | jq '.results[] | .expected_result.value, .pass, .reason’
 	
 
-	ii.	look for a result of “false” and why it did not pass
+			2.	look for a result of “false” and why it did not pass
 4.	Modify Policy named owasptop10_secops_test (change staging, enable signatures).
 
 	a.	Enable appropriate signatures
