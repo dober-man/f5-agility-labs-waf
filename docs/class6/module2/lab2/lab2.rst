@@ -1,39 +1,101 @@
-Lab 2.2: Curl Policy Creation and Modification
---------------------------------------------------
+Module 2: Policy testing 
+========================================================
 
-Task 1 - Using curl to create a ASM policy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Expected time to complete: **30 minutes**
 
+**f5 WAF Tester**
 
-Now that you've run a few curl commands yourself, we'll now make it a little easier (this is an automation lab, after all). 
+F5 Networks Threat Research Team has created a tool that provides an easy and fast way to integrate security testing as part of the SDLC process for basic application protection health check before moving to production.
+The tool is intended to test the WAF configuration state and its provided security posture against common web attack types. The tool will send HTTP requests containing attacks and will expect to receive a WAF blocking page in the response. In case the attack vector was not blocked, the tool will read the WAF logs and its configuration to try determine possible reasons for the attack not being blocked, and suggest corresponding actions.
 
-|
-
-Run the following command to create a new ASM policy "curl1" (this may take a couple of minutes). JSON will be displayed showing the policy creation and the policy's attributes:
-
-.. code-block:: bash
-        
-        curl -sk -u admin:$password -X POST https://10.1.1.245/mgmt/tm/asm/policies -d '{"name":"curl1"}' | sed 's/,/\'$'\n/g'
+**Disclaimer**: The tool is not testing whether the application itself is vulnerable and also tests only a subset of attacks. The tool tries to test the WAF security policy level, and is not a replacement for a vulnerability scanner assessment.
 
 |
+**Installation**
 
-Navigate to Security->Application Security->Security Policies->Policies List to verify the "curl1" policy was created
+1. This tool runs on a linux based host and requires Python 2.7+.  
 
+  a. To install Python:
+      Ubuntu/Kali -  sudo apt-get install -y python-pip
+      Fedora - sudo dnf install -y python-pip
 
-Before running the below command, navigate to Security->Application Security->IP Addresses->IP Address Exceptions for the “curl1" policy, noting the configuration. 
+2. Once Python is installed, install the tool using the following command:
 
-.. note:: 
+      pip install git+https://github.com/f5devcentral/f5-waf-tester.git
 
-        To select the different policies by using the “Current edited security policy” dropdown.
+**How to Use**
 
-Run the following command to modify the policy by adding a whitelist ip, using the policy id from the output of "curl1" policy creation:
+1.	Create a configuration file for the first time by going to directory /home/f5student/.local/bin, and executing:
 
-.. code-block:: bash
+      ./f5-waf-tester –init
 
-        curl -sk -u admin:$password -X POST https://10.1.1.245/mgmt/tm/asm/policies/<policyId>/whitelist-ips -H "Content-Type: application/json" -d '{"ipAddress":"165.25.76.234", "ipMask":"255.255.255.255"}'
+	  This will run you through a wizard where you will populate:
 
-|
+[BIG-IP] Host []: - 10.1.1.4
+This is the management IP of the Big-IP that is securing your application.
 
-Refresh the IP Address Exceptions to verify the whitelist ip 165.25.76.234/255.255.255.255 was added.
+[BIG-IP] Username []: admin
+Username of an account that can log into the Big-IP. (Can be a guest account)
 
-Notice the policy was not applied, click “Apply Policy”.  Applying the policy requires a separate REST call.  This will be covered in subsequent labs.
+[BIG-IP] Password []: f5DEMOs4u!
+Password that is tied to the username above.
+ASM Policy Name []: owasptop10_secops_test
+Name of the policy that is tied to the virtual server of the application you are testing.
+
+Virtual Server URL []: http://10.1.10.150 
+URL of the virtual server that services the application you are testing. 
+
+For this lab take the defaults for the rest of the prompts (See Appendix A for an explanation of the other features).  If you want to see the configuration file, it can be found here: /home/f5student/.local/lib/python2.7/site-packages/f5_waf_tester/config/config.json 
+You can also get there by typing:
+	Cd ~/.local/lib/python2.7/site-packages/f5_waf_tester/config/config.json
+
+2.	You can now run the tool by issuing:
+
+./f5-waf-tester
+
+The results of the tests will be displayed on the CLI and also saved to "report.json" under the current folder. Test results will give you information of the attack type that was executed, name of the attack, what protection it was testing (signature, evasion, or violation) along with a pass or fail verdict. If the protection is a signature, it will show the signature ID; if an evasion, it will show the evasion name; if a violation, it will show the violation name.  If the attack passes, you will get the support ID of the block page.  If the attack fails, you will get information of why it failed so you can make policy changes.  At the end it will show the summary and provide total number of passed/failed tests:
+
+Attack information:
+      	"attack_type": "Insecure Deserialization", 
+      	"name": "Insecure Deserialization - node.js", 
+      	"results": {
+        		"header": {
+          			"expected_result": {
+            				"type": "signature", 
+            				"value": "200004283”
+
+Failed test:
+          	"pass": false, 
+          	"reason": "ASM Policy is not in blocking mode", 
+          	"support_id": ""
+
+Passed test:
+"pass": true, 
+          	"reason": "", 
+          	"support_id": "4469169378524397882"
+
+Summary:
+"summary": {
+    		"fail": 30, 
+    		"pass": 18
+
+3.	Open the report and look to see what is failing.
+a.	One way to do this:
+i.	Vi report.json
+ii.	 Search for the failed results by looking for the term “false”.
+1.	Type: /false
+iii.	Look to see why the attack was not blocked by looking for the term “reason”
+b.	Another way:
+i.	cat report.json | jq .details[] | jq '.results[] | .expected_result.value, .pass, .reason’
+ii.	look for a result of “false” and why it did not pass
+4.	Modify Policy named owasptop10_secops_test (change staging, enable signatures) 
+a.	Enable appropriate signatures
+b.	Turn Staging off
+c.	Enable appropriate violations
+d.	Enable appropriate evasions
+5.	Run the f5 WAF tester again to make sure all attacks are stopped.
+6.	Update the Security Template with the new settings:
+a.	Go to Security -> Options -> Application Security -> Advanced Configuration -> Policy Templates.
+b.	Click on owasptop10 template
+c.	Under the Template File line, choose “Use existing security policy” and select the policy you just modified.
+d.	Click Update.
