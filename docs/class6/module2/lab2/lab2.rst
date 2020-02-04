@@ -1,4 +1,4 @@
-Module 2: Initial Configuration of f5 WAF Tester
+Lab 2.2: Initial Configuration of f5 WAF Tester
 ========================================================
 
 Expected time to complete: **5 minutes**

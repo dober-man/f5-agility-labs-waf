@@ -1,111 +1,84 @@
-Lab 2.3: Server-side json filtering
+Appendix A: f5 WAF Tester Administrator Guide
 ------------------------------------------------
 
-Task 1 - Server-side json filtering using uri parameters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Appendix A: f5 WAF tester deeper dive
 
-Queries to ASM's REST API yields lots of useful information, but can be a little extraneous.  Fortunately, the data can be filtered. 
+To install on different platforms:
+Ubuntu/Kali -  sudo apt-get install -y python-pip
+Fedora - sudo dnf install -y python-pip
 
-F5 has documented a number of query parameters that can be passed into iControl REST calls in order to modify their behavior. The first set follows the OData (open data protocol) standard. The filter parameter also supports several operators.
+More information can be observed by clicking f5-waf-tester --help
+usage: f5-waf-tester [-h] [-v] [-i] [-c CONFIG] [-t TESTS] [-r REPORT]
 
-Note that the filtering takes places on the server-side or at the BIG-IP.
+optional arguments:
+  -h, --help            Show this help message and exit
+  -v, --version         Show program's version number and exit
+  -i, --init            Initialize Configuration. (default: False)
+  -c CONFIG, --config CONFIG
+                        Configuration File Path. (default:
+                        /usr/local/lib/python2.7/dist-
+                        packages/f5-waf-tester/config/config.json)
+  -t TESTS, --tests TESTS
+                        Tests File Path. (default: /usr/local/lib/python2.7
+                        /dist-
+                        packages/f5-waf-tester/config/tests.json)
+  -r REPORT, --report REPORT
+                        Report File Save Path. (default: report.json)
 
-$filter - filter on key/value pairs, such as name eq ansible1 which would only display the ansible1 policy. eq stands for equals
+When going through the configuration file prompts (./f5-waf-tester –init), there are more prompts that you can configure:
 
-$select - without select all data is displayed, with select, one can specify which keys to display. Such as displaying only the name field, select=name
+•	Blocking Regular Expression Pattern [<br>Your support ID is: (?P<id>\d+)<br>]: 
+Specifies where to grab your support ID from the block page.  This should remain unchanged unless you have a customized block page.
 
-$skip - in conjunction with $top, acts as a pageanator, specifying how many objects to skip.
+•	Number OF Threads [25]: 
+	Number of threads to open in parallel
 
-$top - takes a numeric value, used to display the top number of objects specified.
+•	[Filters] Test IDs to include (Separated by ',') []: 
+You can specify test IDs to run if you do not want all 24 tests to execute. (See Appendix B for full matrix)
 
-Yes, the dollar sign is important and necessary on these parameters. The operators you can use on these parameters are below. Note that the eq operator can only be used with the filter.
+•	[Filters] Test Systems to include (Separated by ',') []: 
+You can specify test systems to run if you do not want all of them to execute.  
+Here are the possible systems that can be used:
+        All Systems
+	General Database
+	MongoDB
+	Unix/Linux
+	Microsoft Windows
+	Node.js
+	PHP
 
+[Filters] Test Attack Types to include (Separated by ',') []: 
+	Specify attack types to run if you do not want to run all.  The options are:
+		XSS
+		SQL Injection
+		NoSQL Injection
+		Command Execution
+		Path Traversal
+		Predictable Resource Location
+		HTTP Protocol Compliance
+		Detection Evasion
+		Insecure Deserialization
+		Information Leakage
+		JSON Parser Attack
+		XML Parser Attack
+		HTTP Parser Attack
+		HTTP Request Smuggling
+		Server Side Request Forgery
 
-eq - equal
+[Filters] Test IDs to exclude (Separated by ',') []: 
+[Filters] Test Systems to exclude (Separated by ',') []: 
+[Filters] Test Attack Types to exclude (Separated by ',') []:
 
-ne - not equal
-
-lt - less than
-
-le - less than or equal
-
-gt - greater than
-
-ge - greater than or equal
-
-|
-
-**Logical Operators:**
-
-and - both conditions must be true
-
-or - either condition can be true
-
-not - to negate the condition
-
-|
-
-Beyond the OData parameters, there are a few custom parameters as well.
-
-expandSubcollections - allows you to get the subcollection data in the initial request for objects that have subcollections. Examples of subcollections are any key that ends in "reference" such as whitelistIpReference as seen in lab1 of this module. The options follows the "link" to retrieve that configuration data automatically.
-
-.. code-block:: json
-
-    {"whitelistIpReference": {
-        "link":"https://localhost/mgmt/tm/asm/policies/ouO97l-EOX-zt3sDWA7Dag/whitelist-ips?ver=13.1.0",
-        "isSubCollection": true
-        },
-    }
-
-options - allows you to add arguments to the tmsh equivalent command. An example will be shown below.
-
-ver - This is for the specific TMOS version. Setting this parameter guarantees consistent behavior through code upgrades.
-
-|
-
-Run the following code to get just the names of the existing policies:
-
-.. code-block:: bash
-
-        curl -sk -u admin:$password https://10.1.1.245/mgmt/tm/asm/policies/?\$select=name | sed 's/,/\'$'\n/g'
-
-.. code-block:: json
-
-        {"kind":"tm:asm:policies:policycollectionstate"
-        "selfLink":"https://localhost/mgmt/tm/asm/policies?$select=name&ver=13.1.0"
-        "totalItems":2
-        "items":[{"kind":"tm:asm:policies:policystate"
-        "selfLink":"https://localhost/mgmt/tm/asm/policies/u-6T62j_f0XMkjJ_s_Z-gg?ver=13.1.0"
-        "name":"ansible1"}
-        {"kind":"tm:asm:policies:policystate"
-        "selfLink":"https://localhost/mgmt/tm/asm/policies/r3deT9IMy0gBkM65PTVlzA?ver=13.1.0"
-        "name":"WebScrapingPolicy"}]}
-
-|
-|
-
-.. note:: Note the escape character \ for the $ and & characters.
-
-|
-|
-
-Run the following code to filter on just the policy named "ansible1" and only the display its "name" field.
-
-.. code-block:: bash
-
-        curl -sk -u admin:$password https://10.1.1.245/mgmt/tm/asm/policies?\$filter=name+eq+ansible1\&\$select=name | sed 's/,/\'$'\n/g' 
-
-.. code-block:: json
-
-        {
-        "kind": "tm:asm:policies:policycollectionstate",
-        "selfLink": "https://localhost/mgmt/tm/asm/policies?$select=name&ver=13.1.0&$filter=name%20eq%20ansible1",
-        "totalItems": 1,
-        "items": [
-                {
-                "kind": "tm:asm:policies:policystate",
-                "selfLink": "https://localhost/mgmt/tm/asm/policies/u-6T62j_f0XMkjJ_s_Z-gg?ver=13.1.0",
-                "name": "ansible1"
-                }
-                ]
-        }              
+Here are the possible reasons that could cause the test ID to fail:
+        ASM Policy is not in blocking mode
+        Attack Signature is not in the ASM Policy
+        Attack Signatures are not up to date
+        Attack Signature disabled
+        Attack Signature is in staging
+        Parameter * is in staging
+        URL * is in staging
+        URL * Does not check signatures
+        Header * Does not check signatures
+        Evasion disabled
+        Evasion technique is not in blocking mode
+        Violation disabled

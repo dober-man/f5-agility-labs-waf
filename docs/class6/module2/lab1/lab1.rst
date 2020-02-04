@@ -11,6 +11,7 @@ To install Python:
 1. Log into the Ubuntu jumphost, client01 (usernamba/password f5student/f5DEMOs4u!).
 
 Ubuntu/Kali:
+
 .. code-block:: bash
 
         sudo apt-get install -y python-pip
