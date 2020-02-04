@@ -71,7 +71,7 @@ Summary:
 	b.	Another way:
 		i.	cat report.json | jq .details[] | jq '.results[] | .expected_result.value, .pass, .reason’
 		ii.	look for a result of “false” and why it did not pass
-4.	Modify Policy named owasptop10_secops_test (change staging, enable signatures) 
+4.	Modify Policy named owasptop10_secops_test (change staging, enable signatures).
 	a.	Enable appropriate signatures
 	b.	Turn Staging off
 	c.	Enable appropriate violations
@@ -92,4 +92,3 @@ Summary:
    lab1
    lab3
    lab4
-   
