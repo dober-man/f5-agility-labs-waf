@@ -85,6 +85,10 @@ Summary:
 
 	.. image:: images/policy-template.png
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   
 	lab1/lab1
 	lab3/lab3
    	lab4/lab4

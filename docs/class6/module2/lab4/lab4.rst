@@ -294,6 +294,10 @@ Appendix B: Matrix of all f5 WAF Tester Attacks
      - Signature	
      - 200020201
 
-   lab1/lab1
-   lab2/lab2
-   lab3/lab3
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+    lab1/lab1
+    lab2/lab2
+    lab3/lab3
