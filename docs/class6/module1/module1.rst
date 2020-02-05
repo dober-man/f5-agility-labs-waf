@@ -60,12 +60,12 @@ Once the template is created, we’ll use AS3 and Postman to add an ASM policy t
 
             Click ‘Save’ to save the policy
 
-        2d.	Navigate to:  Security  ››  Application Security : Geolocation Enforcement
+    2d.	Navigate to:  Security  ››  Application Security : Geolocation Enforcement
 
-            c.	We’re going to create a Geo enforcement on this policy to block North Korea form accessing out site.  
-                From the ‘Allowed Geolocations’ on the right, find ‘Korea, Democratic People’s Republic of’ and bring it to the left window titled ‘Disallowed Geolocations’:
+        We’re going to create a Geo enforcement on this policy to block North Korea form accessing out site.  
+        From the ‘Allowed Geolocations’ on the right, find ‘Korea, Democratic People’s Republic of’ and bring it to the left window titled ‘Disallowed Geolocations’:
 
-                .. image:: images/5-module1.png
+        .. image:: images/5-module1.png
 
 .. toctree::
    :maxdepth: 1
