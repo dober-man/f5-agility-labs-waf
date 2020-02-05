@@ -27,10 +27,18 @@ Once the template is created, we’ll use AS3 and Postman to add an ASM policy t
     2a: Log into the BIG-IP by opening the FireFox browser in the Linux client and selecting the browser bookmark titled ‘bigip01’ using the following credentials:
 
         Username:	admin
-
-		Password:	f5DEMOs4u!
+        Password:	f5DEMOs4u!
 
         .. image:: images/2-module1.png
+
+    2b:  Let’s create an ASM policy template that we’ll reference later, by navigating to:
+		
+		Security  ››  Application Security : Security Policies : Policies List
+
+        a.	Click ‘Create’
+
+        .. image:: images/3-module1.png
+
 
 .. toctree::
    :maxdepth: 1
