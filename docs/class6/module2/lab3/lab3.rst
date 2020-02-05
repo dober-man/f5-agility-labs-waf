@@ -1,130 +1,40 @@
-Appendix A: f5 WAF Tester Administrator Guide
-------------------------------------------------
+2.3: Remediate ASM Policy to Pass WAF Tester
+=====================================================
 
-To install on different platforms:
-Ubuntu/Kali 
-.. code-block:: bash
-        
-        sudo apt-get install -y python-pip
-Fedora
-.. code-block:: bash
+According to sources, Capital One suffered a data breach which was announced in late July 2019.  
+Although protected by a WAF, it was misconfigured and not able to stop the attack done by Paige Thompson, 
+aka "erratic".  Paige used an exploit called Server Side Request Forgery (SSRF) to compromise a web server
+and access roughly 100 million credit card applications. Capital One is estimating this data breach will 
+cost the company $100 to $150 million dollars in the near term.  
 
-        sudo dnf install -y python-pip
+We will look through the report of the f5 WAF tester to see if any SSRF attacks failed.
 
-More information can be observed by clicking f5-waf-tester --help
-usage: f5-waf-tester [-h] [-v] [-i] [-c CONFIG] [-t TESTS] [-r REPORT]
+2.3.1 - Look for any failed Server Side Request Forgery
 
-optional arguments:
-  -h, --help            Show this help message and exit
-  -v, --version         Show program's version number and exit
-  -i, --init            Initialize Configuration. (default: False)
-  -c CONFIG, --config CONFIG
-                        Configuration File Path. (default:
-                        /usr/local/lib/python2.7/dist-
-                        packages/f5-waf-tester/config/config.json)
-  -t TESTS, --tests TESTS
-                        Tests File Path. (default: /usr/local/lib/python2.7
-                        /dist-
-                        packages/f5-waf-tester/config/tests.json)
-  -r REPORT, --report REPORT
-                        Report File Save Path. (default: report.json)
+	a.	To quickly search the report we will issue a simple jq command:
 
-When going through the configuration file prompts (./f5-waf-tester –init), there are more prompts that you can configure:
+		Type
 
-        Blocking Regular Expression Pattern [<br>Your support ID is: (?P<id>\d+)<br>]: 
-                Specifies where to grab your support ID from the block page.  This should remain unchanged unless you have a customized block page.
+		.. code-block:: bash
 
-	Number OF Threads [25]: 
-	        Number of threads to open in parallel
+			cat report.json | jq .details[] | jq '.attack_type .results[] | .expected_result.value, .pass, .reason'
 
-	[Filters] Test IDs to include (Separated by ',') []: 
-                You can specify test IDs to run if you do not want all 24 tests to execute. (See Appendix B for full matrix)
+You should see that two SSRF protections failed due to the attack signatures not being in the ASM Policy
+	
+2.3.2 - Modify Policy named base_policy (change staging, enable signatures).
 
-	[Filters] Test Systems to include (Separated by ',') []: 
-                You can specify test systems to run if you do not want all of them to execute.  
+	a.	Enable SSRF signatures
 
-                        Here are the possible systems that can be used:
-                                All Systems
-                                General Database
-                                MongoDB
-                                Unix/Linux
-                                Microsoft Windows
-                                Node.js
-                                PHP
+2.3.3 -	Run the f5 WAF tester again to make sure the SSRF attacks are stopped.
 
-        [Filters] Test Attack Types to include (Separated by ',') []: 
-	        Specify attack types to run if you do not want to run all.  
-                
-                The options are:
-		        XSS
+2.3.4 -	Update the Security Template with the new settings.
 
-                        SQL Injection
+	a.	Go to Security -> Options -> Application Security -> Advanced Configuration -> Policy Templates.
 
-                        NoSQL Injection
+	b.	Click on owasptop10 template
 
-                        Command Execution
+	c.	Under the Template File line, choose “Use existing security policy” and select the policy you just modified.
 
-                        Path Traversal
+	d.	Click Update.
 
-                        Predictable Resource Location
-
-                        HTTP Protocol Compliance
-
-                        Detection Evasion
-
-                        Insecure Deserialization
-
-                        Information Leakage
-
-                        JSON Parser Attack
-
-                        XML Parser Attack
-
-                        HTTP Parser Attack
-
-                        HTTP Request Smuggling
-
-                        Server Side Request Forgery
-
-
-        [Filters] Test IDs to exclude (Separated by ',') []: 
-                Exclude test IDs to be run.
-
-        [Filters] Test Systems to exclude (Separated by ',') []: 
-                Exclude test systems to be run.
-
-        [Filters] Test Attack Types to exclude (Separated by ',') []:
-                Exclude attack types to be run.
-
-Here are the possible reasons that could cause the test ID to fail:
-        ASM Policy is not in blocking mode
-
-        Attack Signature is not in the ASM Policy
-
-        Attack Signatures are not up to date
-
-        Attack Signature disabled
-
-        Attack Signature is in staging
-
-        Parameter * is in staging
-
-        URL * is in staging
-
-        URL * Does not check signatures
-
-        Header * Does not check signatures
-
-        Evasion disabled
-
-        Evasion technique is not in blocking mode
-        
-        Violation disabled
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   lab1
-   lab2
-   lab4
+	.. image:: images/policy-template.png
