@@ -3,27 +3,18 @@ Module 1: ASM Policy Template Creation on BIG-IP
 Expected time to complete: **1 hours**
 
 
-**Intro**
+For this module we’re going to be using a combination of the F5 TMUI (GUI) and Postman to make API calls to the F5 via AS3.  
+AS3 stands for Application Services 3 Extension.  AS3 is a flexible, low-overhead mechanism for managing application-specific configurations on a BIG-IP system. 
+AS3 uses a declarative model, meaning you provide a JSON declaration rather than a set of imperative commands. 
+The declaration represents the configuration which AS3 is responsible for creating on a BIG-IP system.  To learn more about AS3, you can visit: 
 
-Ansible is an automated configuration tool that uses config files written in YAML to push configurations to devices and rollback. 
+https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/
 
-Some benefits of Ansible:
+Step 1: Log into the Linux Client via RDP using the following credentials:
 
+	Username:	f5student
+	Password: 	f5DEMOs4u!
 
-
-**Agentless** -  As long as the system can be ssh’d into and has python, it can be configured with Ansible.
-
-**Idempotent** - Ansible’s whole architecture is structured around the concept of idempotency. The core idea here is that you only do things if they are needed and that things are repeatable without side effects. More than anything else this sold me over Puppet and Chef.
-
-**Declarative Not Procedural** - Other configuration tools tend to be procedural — do this and then do that and so on. Ansible works by writing a description of the state of the machine that you want and then it takes steps to fulfill that description.
-
-**Learning Curve** - Ansible typically take much less time to understand than tools like Chef or Puppet. 
-
-
-Although the ASM Ansible functionality is currently limited to policy creation/importation, F5 has invested heavily in developing an Ansible library to interact with the BIG-IP iControl Rest API. Curiosity has grown greatly over the last year and we want to demonstrate how to get started with Ansible and ASM, as future releases will enhance Ansible's ASM capabilities.
-
-
-This first module covers the following topics:
 
 .. toctree::
    :maxdepth: 1
