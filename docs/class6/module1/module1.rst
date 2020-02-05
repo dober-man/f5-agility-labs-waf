@@ -42,12 +42,18 @@ Once the template is created, we’ll use AS3 and Postman to add an ASM policy t
 
     2c.	Name the policy ‘waf_Protected’ and set the following settings:
 
-        Policy Template	                                    Rapid Deployment Policy
-        Enforcement Mode	                                Blocking
-        Auto-Added Signature Accuracy	                    Medium
-        Signature Staging	                                Enabled
-        Enforcement Readiness Period	                    7
-        Policy is Case Sensitive	                        Disabled
+        Policy Template:                                    Rapid Deployment Policy
+
+        Enforcement Mode:	                                Blocking
+
+        Auto-Added Signature Accuracy:	                    Medium
+
+        Signature Staging:                                  Enabled
+
+        Enforcement Readiness Period:	                    7
+
+        Policy is Case Sensitive:	                        Disabled
+        
         Differentiate between HTTP/WS and HTTPS/WSS URLs	Disabled
 
         .. image:: images/4-module1.png
