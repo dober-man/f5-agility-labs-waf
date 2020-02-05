@@ -1,7 +1,15 @@
 Lab 2.2: Initial Configuration and First Run of f5 WAF Tester
 ========================================================
 
-2.2.1 - Create an initial configuration file by using the Terminal and going to directory /home/f5student/.local/bin, and executing:
+To run the f5 WAF tester tool, a configuration file needs to be populated to specify which f5 instance this application is running on,
+an account to log into the f5 instance to look at logs, name of the ASM policy to see why attacks are getting through, and the URL of the 
+application you want to test.
+
+2.2.1 - To populate the configuration file, use the Terminal and go to directory /home/f5student/.local/bin.  Then execute:
+
+	./f5_waf_tester --init 
+
+	Note: there are two dashes before init
 
 .. code-block:: bash
 
@@ -25,7 +33,7 @@ This will run you through a wizard where you will populate:
 		URL of the virtual server that services the application you are testing. 
 
 For this lab take the defaults for the rest of the prompts (See Appendix A for an explanation of the other features).  If you want to see the configuration file, it can be found here: /home/f5student/.local/lib/python2.7/site-packages/f5_waf_tester/config/config.json 
-You can also see the config file by typing:
+You can see the config file by typing:
 
 .. code-block:: bash
 

@@ -2,7 +2,7 @@ Appendix B: Matrix of all f5 WAF Tester Attacks
 --------------------------------------------------------------
 
 .. list-table::
-   :widths: 5 5 5 5 5 5
+   :widths: 1 1 1 1 1 1
    :header-rows: 1
 
    * - **Test ID**

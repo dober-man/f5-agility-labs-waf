@@ -9,7 +9,7 @@ Expected time to complete **10 minutes**
 
 To install Python:
 
-2.1.1 - Log into the Ubuntu jumphost, client01 (username/password f5student/f5DEMOs4u!) and open a terminal.
+2.1.1 - Log into the Ubuntu client (client01 - username/password f5student/f5DEMOs4u!) and open a terminal.
 
 	.. image:: images/terminal.png
 

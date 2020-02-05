@@ -1,7 +1,7 @@
 Lab 2.3: Remediate ASM Policy to Pass WAF Tester
 =====================================================
 
-According to sources, Capital One suffered a data breach which was announced in late July 2019.  
+According to sources, Capital One suffered a data breach which was announced in late July of 2019.  
 Although protected by a WAF, it was misconfigured and not able to stop the attack executed by Paige Thompson, 
 aka "erratic".  Paige used an exploit called Server Side Request Forgery (SSRF) to compromise a web server
 and access roughly 100 million credit card applications among other PII data. Capital One is estimating this data breach will 
@@ -24,7 +24,6 @@ You should see that one SSRF protection failed due to the attack signature not b
 2.3.2 - Modify Policy named base_policy (change staging, enable signatures).
 
 	a.	Enable SSRF signatures
-    
     b.  Disable signature staging
 
 2.3.3 -	Run the f5 WAF tester again to make sure the SSRF attacks are stopped.
