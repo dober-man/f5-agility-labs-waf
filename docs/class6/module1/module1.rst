@@ -19,6 +19,19 @@ Step 1: Log into the Linux Client via RDP using the following credentials:
 
 .. image:: images/1-module1.png
 
+Step 2: We’re going to be working in the BIG-IP to create an ASM template with some specific settings applied that we can use on our VS.  
+Once the template is created, we’ll use AS3 and Postman to add an ASM policy to a VS based on our template to show how to add automation of ASM policies to applications.  
+
+
+
+    2a: Log into the BIG-IP by opening the FireFox browser in the Linux client and selecting the browser bookmark titled ‘bigip01’ using the following credentials:
+
+        Username:	admin
+
+		Password:	f5DEMOs4u!
+
+        .. image:: images/2-module1.png
+
 .. toctree::
    :maxdepth: 1
    :glob:
