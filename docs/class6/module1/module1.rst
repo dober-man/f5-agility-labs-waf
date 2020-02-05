@@ -67,6 +67,14 @@ Once the template is created, we’ll use AS3 and Postman to add an ASM policy t
 
         .. image:: images/5-module1.png
 
+        Click ‘Apply’ in the top right of the window.
+
+    2e. e.	Navigate to:  ‘Security  ››  Application Security : Policy Building : Learning and Blocking Settings
+
+        If you expand ‘IP Addresses and Geolocations’ you’ll notice that we’re enforcing blocking of the Geolocation that we created in the previous step as well as access from known malicious IP addresses.
+
+        .. image:: images/6-module1.png
+
 .. toctree::
    :maxdepth: 1
    :glob:
