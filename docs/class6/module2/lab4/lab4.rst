@@ -120,11 +120,3 @@ Here are the possible reasons that could cause the test ID to fail:
         Evasion technique is not in blocking mode
         
         Violation disabled
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   lab1
-   lab2
-   lab4

@@ -13,7 +13,7 @@ To install Python:
 
 	.. image:: images/terminal.png
 
-Ubuntu/Kali:
+Within the terminal type:
 
 .. code-block:: bash
 

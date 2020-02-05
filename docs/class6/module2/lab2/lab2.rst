@@ -1,7 +1,7 @@
 Lab 2.2: Initial Configuration and First Run of f5 WAF Tester
 ========================================================
 
-2.2.1 - Create a configuration file for the first time by going to directory /home/f5student/.local/bin, and executing:
+2.2.1 - Create an initial configuration file by using the Terminal and going to directory /home/f5student/.local/bin, and executing:
 
 .. code-block:: bash
 
@@ -25,7 +25,7 @@ This will run you through a wizard where you will populate:
 		URL of the virtual server that services the application you are testing. 
 
 For this lab take the defaults for the rest of the prompts (See Appendix A for an explanation of the other features).  If you want to see the configuration file, it can be found here: /home/f5student/.local/lib/python2.7/site-packages/f5_waf_tester/config/config.json 
-You can also get there by typing:
+You can also see the config file by typing:
 
 .. code-block:: bash
 
@@ -37,7 +37,7 @@ You can also get there by typing:
 
 	./f5-waf-tester
 
-The results of the tests will be displayed on the CLI and also saved to "report.json" under the current folder. Test results will give you information of the attack type that was executed, name of the attack, what protection it was testing (signature, evasion, or violation) along with a pass or fail verdict. If the protection is a signature, it will show the signature ID; if an evasion, it will show the evasion name; if a violation, it will show the violation name.  If the attack passes, you will get the support ID of the block page.  If the attack fails, you will get information of why it failed so you can make policy changes.  At the end it will show the summary and provide total number of passed/failed tests:
+The results of the tests will be displayed in the Terminal and also saved to "report.json" under the current folder. Test results will give you information of the attack type that was executed, name of the attack, what protection it was testing (signature, evasion, or violation) along with a pass or fail verdict. If the protection is a signature, it will show the signature ID; if an evasion, it will show the evasion name; if a violation, it will show the violation name.  If the attack passes, you will get the support ID of the block page.  If the attack fails, you will get information of why it failed so you can make policy changes.  At the end it will show the summary and provide total number of passed/failed tests:
 
 Attack information:
       	"attack_type": "Insecure Deserialization", 
