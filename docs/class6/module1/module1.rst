@@ -27,6 +27,7 @@ Once the template is created, we’ll use AS3 and Postman to add an ASM policy t
     2a: Log into the BIG-IP by opening the FireFox browser in the Linux client and selecting the browser bookmark titled ‘bigip01’ using the following credentials:
 
         Username:	admin
+    
         Password:	f5DEMOs4u!
 
         .. image:: images/2-module1.png
@@ -39,6 +40,17 @@ Once the template is created, we’ll use AS3 and Postman to add an ASM policy t
 
         .. image:: images/3-module1.png
 
+    2c.	Name the policy ‘waf_Protected’ and set the following settings:
+
+        Policy Template	                                    Rapid Deployment Policy
+        Enforcement Mode	                                Blocking
+        Auto-Added Signature Accuracy	                    Medium
+        Signature Staging	                                Enabled
+        Enforcement Readiness Period	                    7
+        Policy is Case Sensitive	                        Disabled
+        Differentiate between HTTP/WS and HTTPS/WSS URLs	Disabled
+
+        .. image:: images/4-module1.png
 
 .. toctree::
    :maxdepth: 1
