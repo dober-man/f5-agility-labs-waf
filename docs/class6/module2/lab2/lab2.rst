@@ -1,4 +1,4 @@
-Lab 2.2: Initial Configuration of f5 WAF Tester
+Lab 2.2: Initial Configuration and First Run of f5 WAF Tester
 ========================================================
 
 2.2.1 - Create a configuration file for the first time by going to directory /home/f5student/.local/bin, and executing:

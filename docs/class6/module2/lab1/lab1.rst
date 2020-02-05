@@ -11,7 +11,7 @@ To install Python:
 
 2.1.1 - Log into the Ubuntu jumphost, client01 (username/password f5student/f5DEMOs4u!) and open a terminal.
 
-#insert picture
+	.. image:: images/terminal.png
 
 Ubuntu/Kali:
 
