@@ -24,7 +24,7 @@ Once the template is created, we’ll use AS3 and Postman to add an ASM policy t
 
 
 
-    2a: Log into the BIG-IP by opening the FireFox browser in the Linux client and selecting the browser bookmark titled ‘bigip01’ using the following credentials:
+    **2a:** Log into the BIG-IP by opening the FireFox browser in the Linux client and selecting the browser bookmark titled ‘bigip01’ using the following credentials:
 
         Username:	admin
     
@@ -32,15 +32,15 @@ Once the template is created, we’ll use AS3 and Postman to add an ASM policy t
 
         .. image:: images/2-module1.png
 
-    2b:  Let’s create an ASM policy template that we’ll reference later, by navigating to:
+    **2b:**  Let’s create an ASM policy template that we’ll reference later, by navigating to:
 		
 		Security  ››  Application Security : Security Policies : Policies List
 
-        a.	Click ‘Create’
+            Click ‘Create’
 
-        .. image:: images/3-module1.png
+            .. image:: images/3-module1.png
 
-    2c.	Name the policy ‘waf_Protected’ and set the following settings:
+    **2c.**	Name the policy ‘waf_Protected’ and set the following settings:
 
         Policy Template:                                    Rapid Deployment Policy
 
@@ -60,7 +60,7 @@ Once the template is created, we’ll use AS3 and Postman to add an ASM policy t
 
             Click ‘Save’ to save the policy
 
-    2d.	Navigate to:  Security  ››  Application Security : Geolocation Enforcement
+    **2d.**	Navigate to:  Security  ››  Application Security : Geolocation Enforcement
 
         We’re going to create a Geo enforcement on this policy to block North Korea form accessing out site.  
         From the ‘Allowed Geolocations’ on the right, find ‘Korea, Democratic People’s Republic of’ and bring it to the left window titled ‘Disallowed Geolocations’:
@@ -69,13 +69,13 @@ Once the template is created, we’ll use AS3 and Postman to add an ASM policy t
 
         Click ‘Apply’ in the top right of the window.
 
-    2e. Navigate to:  ‘Security  ››  Application Security : Policy Building : Learning and Blocking Settings
+    **2e.** Navigate to:  ‘Security  ››  Application Security : Policy Building : Learning and Blocking Settings
 
         If you expand ‘IP Addresses and Geolocations’ you’ll notice that we’re enforcing blocking of the Geolocation that we created in the previous step as well as access from known malicious IP addresses.
 
         .. image:: images/6-module1.png
     
-    2f. On this same screen, under the section ‘HTTP protocol compliance failed’ uncheck the boxes to ‘learn’, ‘alarm’, and ‘block’ as shown below. 
+    **2f.** On this same screen, under the section ‘HTTP protocol compliance failed’ uncheck the boxes to ‘learn’, ‘alarm’, and ‘block’ as shown below. 
 
         .. image:: images/7-module1.png
 
@@ -83,7 +83,7 @@ Once the template is created, we’ll use AS3 and Postman to add an ASM policy t
 
 **Step 3:** Template Creation	
 
-    3a.	We’re now going to save this policy as a template.  To do so, navigate to:
+    **3a.**	We’re now going to save this policy as a template.  To do so, navigate to:
 
 	    Security  ››  Options : Application Security : Advanced Configuration : Policy Templates
 
@@ -101,7 +101,7 @@ Launch Postman from the Linux desktop icon shown below:
 
         .. image:: images/10-module1.png
 
-    4a. Once Postman is open, we need to import the collection (series of declarations we’ll be using on our BIG-IP) from GitHub.  To do so, click on ‘Import’ on the top left of Postman and select ‘Import From Link’ option.  Paste the following into the field where you enter the URL and click ‘Import’
+    **4a.** Once Postman is open, we need to import the collection (series of declarations we’ll be using on our BIG-IP) from GitHub.  To do so, click on ‘Import’ on the top left of Postman and select ‘Import From Link’ option.  Paste the following into the field where you enter the URL and click ‘Import’
 
         https://gitlab.com/f5-examples/udf_waf_cicd/-/raw/master/WAF_342_postman_collection.json?inline=false 
 
@@ -130,17 +130,17 @@ Launch Postman from the Linux desktop icon shown below:
 
         .. image:: images/15-module1.png
 
-    5a. Click on ‘waf_labs / waf_cicd’ and at the bottom of the page you’ll see ‘waf_policy.json’.  Click on that to view the JSON file:
+    **5a.** Click on ‘waf_labs / waf_cicd’ and at the bottom of the page you’ll see ‘waf_policy.json’.  Click on that to view the JSON file:
 
         **Note in the top section you’ll see the name “owasptop10’.  This refers to the template we created on the BIG-IP to build the ASM policy and matches the name of the template we created in the BIG-IP.
 
         .. image:: images/16-module1.png
 
-    5b. Return to Postman and run the declaration titled ‘as3_with_declarative_waf_VS_create’ by clicking ‘Send’ on the far right of the screen.  If it finished successfully, you’ll see the following response from the BIG-IP in Postman.
+    **5b.** Return to Postman and run the declaration titled ‘as3_with_declarative_waf_VS_create’ by clicking ‘Send’ on the far right of the screen.  If it finished successfully, you’ll see the following response from the BIG-IP in Postman.
 
         .. image:: images/17-module1.png
 
-    5c. Validate that the ASM policy has been created via the previous step by logging into the BIG-IP with the following credentials.  
+    **5c.** Validate that the ASM policy has been created via the previous step by logging into the BIG-IP with the following credentials.  
 
         Username:	admin
 		Password:	f5DEMOs4u!
