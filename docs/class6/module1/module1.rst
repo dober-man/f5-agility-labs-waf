@@ -1,6 +1,6 @@
 Module 1: ASM Policy Template Creation on BIG-IP
 ===================================================
-Expected time to complete: **1 hours**
+
 
 
 For this module we’re going to be using a combination of the F5 TMUI (GUI) and Postman to make API calls to the F5 via AS3.  
@@ -10,7 +10,7 @@ The declaration represents the configuration which AS3 is responsible for creati
 
 https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/
 
-Step 1: Log into the Linux Client via RDP using the following credentials:
+**Step 1:** Log into the Linux Client via RDP using the following credentials:
 
 	Username:	f5student
 
@@ -19,7 +19,7 @@ Step 1: Log into the Linux Client via RDP using the following credentials:
 
 .. image:: images/1-module1.png
 
-Step 2: We’re going to be working in the BIG-IP to create an ASM template with some specific settings applied that we can use on our VS.  
+**Step 2:** We’re going to be working in the BIG-IP to create an ASM template with some specific settings applied that we can use on our VS.  
 Once the template is created, we’ll use AS3 and Postman to add an ASM policy to a VS based on our template to show how to add automation of ASM policies to applications.  
 
 
@@ -81,7 +81,7 @@ Once the template is created, we’ll use AS3 and Postman to add an ASM policy t
 
         Click ‘Save’ at the bottom of this screen to save our changes.
 
-Step 3: Template Creation	
+**Step 3:** Template Creation	
 
     3a.	We’re now going to save this policy as a template.  To do so, navigate to:
 
@@ -95,7 +95,7 @@ Step 3: Template Creation
 
         .. image:: images/9-module1.png
 
-Step 4: Now that we have a template created, we’re now done with the BIG-IP for now and are moving onto Postman.  
+**Step 4:** Now that we have a template created, we’re now done with the BIG-IP for now and are moving onto Postman.  
 Postman will be interacting with our BIG-IP via AS3 making API calls.  
 Launch Postman from the Linux desktop icon shown below:
 
@@ -120,7 +120,7 @@ Launch Postman from the Linux desktop icon shown below:
 
         This validates that AS3 is running and responded with version 3.16.0
 
-Step 5: We’re now going to make an AS3 declaration to the BIG-IP.  To view the JSON declaration, click on the declaration titled ‘as3 with_declarative_waf_and_vs’ and select ‘Body’ and ‘raw” as shown below:
+**Step 5:** We’re now going to make an AS3 declaration to the BIG-IP.  To view the JSON declaration, click on the declaration titled ‘as3 with_declarative_waf_and_vs’ and select ‘Body’ and ‘raw” as shown below:
 
     .. image:: images/14-module1.png
 
@@ -158,7 +158,7 @@ Step 5: We’re now going to make an AS3 declaration to the BIG-IP.  To view the
                 .. image:: images/18-module1.png
 
             This ends module 1.
-            
+
 .. toctree::
    :maxdepth: 1
    :glob:
