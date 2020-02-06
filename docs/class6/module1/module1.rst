@@ -135,6 +135,30 @@ Step 5: We’re now going to make an AS3 declaration to the BIG-IP.  To view the
         **Note in the top section you’ll see the name “owasptop10’.  This refers to the template we created on the BIG-IP to build the ASM policy and matches the name of the template we created in the BIG-IP.
 
         .. image:: images/16-module1.png
+
+    5b. Return to Postman and run the declaration titled ‘as3_with_declarative_waf_VS_create’ by clicking ‘Send’ on the far right of the screen.  If it finished successfully, you’ll see the following response from the BIG-IP in Postman.
+
+        .. image:: images/17-module1.png
+
+    5c. Validate that the ASM policy has been created via the previous step by logging into the BIG-IP with the following credentials.  
+
+        Username:	admin
+		Password:	f5DEMOs4u!
+
+		Once logged in, go to: 
+
+            Security  ››  Application Security : Security Policies : Policies List
+	
+            There you’ll see the policy titled ‘waf_juiceshop_secops_testing’ under the newly created ‘secops_testing’ partition:
+
+                .. image:: images/18-module1.png
+
+            This declaration also created a VS on the BIG-IP called ‘juiceshop_secops_testing’ with the security policy ‘waf_juiceshop_secops_testing’ WAF policy applied.
+
+                .. image:: images/18-module1.png
+
+            This ends module 1.
+            
 .. toctree::
    :maxdepth: 1
    :glob:
