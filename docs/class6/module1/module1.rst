@@ -101,7 +101,40 @@ Launch Postman from the Linux desktop icon shown below:
 
         .. image:: images/10-module1.png
 
+    4a. Once Postman is open, we need to import the collection (series of declarations we’ll be using on our BIG-IP) from GitHub.  To do so, click on ‘Import’ on the top left of Postman and select ‘Import From Link’ option.  Paste the following into the field where you enter the URL and click ‘Import’
 
+        https://gitlab.com/f5-examples/udf_waf_cicd/-/raw/master/WAF_342_postman_collection.json?inline=false 
+
+        .. image:: images/11-module1.png
+
+        With the collection imported, on the left-hand pane of Postman, you’ll see the collection titled ‘WAF_342’ with several declarations under it:
+
+        .. image:: images/12-module1.png
+
+        The first collection does a simple GET request against the lab BIG-IP to ensure that AS3 is installed and running.  
+        It will also show you the version of AS3. 
+
+        Click on the selection ‘check if AS3 is ready’ and click ‘Send’.  You should see the BIG IP report back with the following:
+
+        .. image:: images/13-module1.png
+
+        This validates that AS3 is running and responded with version 3.16.0
+
+Step 5: We’re now going to make an AS3 declaration to the BIG-IP.  To view the JSON declaration, click on the declaration titled ‘as3 with_declarative_waf_and_vs’ and select ‘Body’ and ‘raw” as shown below:
+
+    .. image:: images/14-module1.png
+
+    In this declaration, we’re going to be creating a new Virtual Server on the BIG-IP, creating an ASM policy by referencing the template created earlier and applying it to the new Virtual Server. This virtual server front-ends a pool member that is running OWASP’s Juice Shop application that has all of the OWASP top 10 vulnerabilities.  
+
+    Also note that the declaration is calling an external URL hosted on Gitlab and is our WAF JSON declaration that will be creating all of the configuration items mentioned above.  If you’d like, you can view the JSON declaration by using the bookmark bar in FireFox on the Linux Desktop and clicking on the ‘WAF_342’ Bookmark folder and clicking on ‘Gitlab’.  The following screen appears:
+
+        .. image:: images/15-module1.png
+
+    5a. Click on ‘waf_labs / waf_cicd’ and at the bottom of the page you’ll see ‘waf_policy.json’.  Click on that to view the JSON file:
+
+        **Note in the top section you’ll see the name “owasptop10’.  This refers to the template we created on the BIG-IP to build the ASM policy and matches the name of the template we created in the BIG-IP.
+
+        .. image:: images/16-module1.png
 .. toctree::
    :maxdepth: 1
    :glob:
