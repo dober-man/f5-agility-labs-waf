@@ -69,11 +69,38 @@ Once the template is created, we’ll use AS3 and Postman to add an ASM policy t
 
         Click ‘Apply’ in the top right of the window.
 
-    2e. e.	Navigate to:  ‘Security  ››  Application Security : Policy Building : Learning and Blocking Settings
+    2e. Navigate to:  ‘Security  ››  Application Security : Policy Building : Learning and Blocking Settings
 
         If you expand ‘IP Addresses and Geolocations’ you’ll notice that we’re enforcing blocking of the Geolocation that we created in the previous step as well as access from known malicious IP addresses.
 
         .. image:: images/6-module1.png
+    
+    2f. On this same screen, under the section ‘HTTP protocol compliance failed’ uncheck the boxes to ‘learn’, ‘alarm’, and ‘block’ as shown below. 
+
+        .. image:: images/7-module1.png
+
+        Click ‘Save’ at the bottom of this screen to save our changes.
+
+Step 3: Template Creation	
+
+    3a.	We’re now going to save this policy as a template.  To do so, navigate to:
+
+	    Security  ››  Options : Application Security : Advanced Configuration : Policy Templates
+
+        On the far right of the screen click ‘Create’
+
+        .. image:: images/8-module1.png
+
+        Name the template ‘owasptop10’ and select ‘waf_protected’ as the Template File and click ‘Create’.
+
+        .. image:: images/9-module1.png
+
+Step 4: Now that we have a template created, we’re now done with the BIG-IP for now and are moving onto Postman.  
+Postman will be interacting with our BIG-IP via AS3 making API calls.  
+Launch Postman from the Linux desktop icon shown below:
+
+        .. image:: images/10-module1.png
+
 
 .. toctree::
    :maxdepth: 1
