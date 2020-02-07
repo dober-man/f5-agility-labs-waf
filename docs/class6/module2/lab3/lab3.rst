@@ -27,7 +27,9 @@ You should see that one SSRF protection failed due to the attack signature not b
    
 2.3.3 -	Run the f5 WAF tester again to make sure the SSRF attacks are stopped.
 
-    a. You should see that the signature is in staging.  Disable staging and run the test again.
+    a. From the report you should now see that the signature is in staging.  
+    
+    b. Disable staging and run the test again.
 
 2.3.4 -	Update the Security Template with the new settings.
 
