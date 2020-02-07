@@ -17,16 +17,17 @@ We will look through the report of the f5 WAF tester to see if any SSRF attacks 
 
 		.. code-block:: bash
 
-			cat report.json | jq .details[] | jq '.attack_type .results[] | .expected_result.value, .pass, .reason'
+			cat report.json | jq '.details[]| select(.attack_type | contains ("Server Side Request Forgery")) | .attack_type, .results[]'
 
 You should see that one SSRF protection failed due to the attack signature not being in the ASM Policy
 	
 2.3.2 - Modify Policy named base_policy (change staging, enable signatures).
 
 	a.	Enable SSRF signatures
-    b.  Disable signature staging
-
+   
 2.3.3 -	Run the f5 WAF tester again to make sure the SSRF attacks are stopped.
+
+    a. You should see that the signature is in staging.  Disable staging and run the test again.
 
 2.3.4 -	Update the Security Template with the new settings.
 
