@@ -1,7 +1,6 @@
 Lab 2.1: Installation of f5's WAF Tester
 -------------------------------------------
 
-Expected time to complete **10 minutes**
 
 **Installation**
 
