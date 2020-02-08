@@ -43,4 +43,8 @@ You should see that one SSRF protection failed due to the attack signature not b
 
 	.. image:: images/policy-template.png
 
+
+
+    
+
     **End of Module 2**
