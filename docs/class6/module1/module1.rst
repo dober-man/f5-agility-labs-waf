@@ -21,6 +21,6 @@ https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/
    :maxdepth: 1
    :glob:
 
-   lab*/lab*
+   lab*
    review
 
