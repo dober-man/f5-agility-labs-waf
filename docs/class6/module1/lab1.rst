@@ -26,7 +26,7 @@ Log into the BIG-IP by opening the FireFox browser in the Linux client and selec
 
         .. image:: images/2-module1.png
 
-3.1.3 Create an AWAF base policy
+3.1.3 Create a policy 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Let’s create an AWAF base policy that we’ll reference later, by navigating to:
@@ -37,7 +37,10 @@ Let’s create an AWAF base policy that we’ll reference later, by navigating t
 
             .. image:: images/3-module1.png
 
-    **2c.**	Name the policy 'base_policy' and set the following settings:
+3.1.4 Configure policy properties
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    	Name the policy 'base_policy' and set the following settings:
 
         policy Name:                                        base_policy
 
@@ -56,11 +59,14 @@ Let’s create an AWAF base policy that we’ll reference later, by navigating t
         Differentiate between HTTP/WS and HTTPS/WSS URLs	Disabled
 
 
-        .. image:: images/4-module1.png
+            .. image:: images/4-module1.png
 
             Click ‘Save’ to save the policy
 
-    **2d.**	Navigate to:  Security  ››  Application Security : Geolocation Enforcement
+3.1.5 Block traffic from north korea
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    Navigate to:  Security  ››  Application Security : Geolocation Enforcement
 
         We’re going to create a Geo enforcement on this policy to block North Korea form accessing out site.  
         From the ‘Allowed Geolocations’ on the right, find ‘Korea, Democratic People’s Republic of’ and bring it to the left window titled ‘Disallowed Geolocations’:
@@ -69,13 +75,13 @@ Let’s create an AWAF base policy that we’ll reference later, by navigating t
 
         Click ‘Apply’ in the top right of the window.
 
-    **2e.** Navigate to:  ‘Security  ››  Application Security : Policy Building : Learning and Blocking Settings
+    Navigate to:  ‘Security  ››  Application Security : Policy Building : Learning and Blocking Settings
 
         If you expand ‘IP Addresses and Geolocations’ you’ll notice that we’re enforcing blocking of the Geolocation that we created in the previous step as well as access from known malicious IP addresses.
 
         .. image:: images/6-module1.png
     
-    **2f.** On this same screen, under the section ‘HTTP protocol compliance failed’ uncheck the boxes to ‘learn’, ‘alarm’, and ‘block’ as shown below. 
+    On this same screen, under the section ‘HTTP protocol compliance failed’ uncheck the boxes to ‘learn’, ‘alarm’, and ‘block’ as shown below. 
 
         .. image:: images/7-module1.png
 

@@ -7,10 +7,15 @@ Intro
 Welcome to F5's Agility Labs, 2020 edition! This class will focus on how to integrate F5 AWAF inside a CI/CD pipeline. 
 
 By the end of this lab you should be able to:
+
 1. Create an AWAF template
+
 2. Properly test the template 
+
 3. Enable SRE's to deploy applicaitons using your template 
+
 4. Enable SRE's to make custom changes 
+
 
 In order to successfully complete the lab you should have a basic understanding of some of the DevOps methodologies and tools,
 
@@ -32,29 +37,6 @@ Two main features that make AWAF to DevSecOps integration frictionless
   
 Declarative AWAF policy YAML/JSON file can be used in place of a legacy XML policy (XML policy is still supported) and can be easily applied to an app following the same pipeline of the DevOps toolchain. Policy can be kept in SCM alongside with app source code, and be used by CI server in a traditional DevOps deployment model. Since JSON and YAML are trivially mapped (and JSON can be converted to YAML and vice versa), AWAF supports both file types.
 For the purpose of this lab our WAF policy is expressed as a JSON blob.
-
-Security as Code
-----------------
-
-One of the fundamental tenets of DevOps is "Infrastructure as Code." Various DevOps tools allow a DevOps person to define servers and infrastructure with programming language and deploy it in an automated fashion. 
-Before the recent focus on agile practices and automated testing, developers had the tendency to write code without testing it themselves. It was more common to throw the code over to a quality assurance team and let them find the bugs. It was eventually accepted that finding and fixing bugs later in the development cycle costs much more money than finding them earlier.
-Security should be no different. It is part of quality and should be tested just like functionality. This lab was built with the "joint code and security development cycle" concept in mind where WAF Policy follows the development cycle of an App.
-Automation of SAST, DAST, Security scanning and Trusted traffic->Learning false-positives elimination allows for a reliable and repeatable security testing alongside the code testing routines. At the same time elimination of manual testing steps reduce human errors, workload on various teams and eventually leads to a faster software delivery with minimal security risk.
-
-There are several types of testing that is being used by today's App developers:
- * Unit testing - automated testing of a section of an App code ("unit") to ensure that "unit" meets design requirements and behaves as intended
- * Integration testing - set of tests built to test the integration between various application parts 
- * Functional testing - a comprehensive set of tests that ensures that App is functionally sound and performs all of its functions as designed
-
-Security takes similar approach to testing with various types of security test sets:
- * Static Code Analysis (SAST) with Code dependency scan
- * Penetration testing
- * Compliance testing
- * Load testing (DoS, DDoS)
- * Dynamic Application Security Testing (DAST)
-
-All these tests can be automated and included in the overall App development cycle to ensure WAF Policies, Firewall rules, DDoS protection devices and other security components always deployed in a fast, consistent and reliable manner.
-This lab uses SAST, DAST and simple set of penetration tests designed to provide an overview of the "Security as Code" approach and F5's DevSecOps capabilities that seamlessly fit into this approach.
 
 AWAF policy overview
 ======================================
