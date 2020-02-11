@@ -38,6 +38,7 @@ Let’s create an AWAF base policy that we’ll reference later, by navigating t
             .. image:: images/3-module1.png
 
     **2c.**	Name the policy 'base_policy' and set the following settings:
+
         policy Name:                                        base_policy
 
         Policy Template:                                    Rapid Deployment Policy
@@ -53,6 +54,7 @@ Let’s create an AWAF base policy that we’ll reference later, by navigating t
         Policy is Case Sensitive:	                        Disabled
 
         Differentiate between HTTP/WS and HTTPS/WSS URLs	Disabled
+
 
         .. image:: images/4-module1.png
 

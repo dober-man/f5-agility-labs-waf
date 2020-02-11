@@ -13,7 +13,7 @@ Lab 1.2: Creation of an AWAF template
 
         .. image:: images/8-module1.png
 
-        Name the template ‘owasptop10’ and select ‘waf_protected’ as the Template File and click ‘Create’.
+        Name the template ‘owasptop_10_agility’ and select ‘base_policy’ as the Template File and click ‘Create’.
 
         .. image:: images/9-module1.png
 
