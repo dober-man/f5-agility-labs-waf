@@ -5,14 +5,18 @@ To run the f5 WAF tester tool, a configuration file needs to be populated to spe
 an account to log into the f5 instance to look at logs, name of the ASM policy to see why attacks are getting through, and the URL of the 
 application you want to test.
 
-2.2.1 - To populate the configuration file, use the Terminal and go to directory /home/f5student/.local/bin.  Then execute:
+2.2.1 - To populate the configuration file, use the Terminal and go to f5 waf tester directory .  
 
+	cd /home/f5student/.local/bin
+
+	Then execute:
 	./f5_waf_tester --init 
 
 	Note: there are two dashes before init
 
 .. code-block:: bash
 
+	  cd /home/f5student/.local/bin
       ./f5-waf-tester –init
 
 This will run you through a wizard where you will populate:
@@ -26,7 +30,7 @@ This will run you through a wizard where you will populate:
 	[BIG-IP] Password []: f5DEMOs4u!
 		Password that is tied to the username above.
 
-	ASM Policy Name []: /secops_testing/waf_juiceshop_secops_testing
+	ASM Policy Name []: /secops_testing/juiceshop/waf_secops_testing
 		Name of the policy that is tied to the virtual server of the application you are testing.
 
 	Virtual Server URL []: http://10.1.10.120 

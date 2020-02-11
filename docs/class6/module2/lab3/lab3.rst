@@ -41,10 +41,10 @@ You should see that one SSRF protection failed due to the attack signature not b
 
 	d.	Click Update.
 
-	.. image:: images/policy-template.png
+.. image:: images/policy-template.png	
 
 
 
-    
+
 
     **End of Module 2**
