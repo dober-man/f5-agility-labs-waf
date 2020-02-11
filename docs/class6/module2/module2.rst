@@ -14,6 +14,8 @@ If after Agility you would like to use the f5 WAF tester, you can find the repoo
 
 https://github.com/f5devcentral/f5-waf-tester
 
+.. image:: images/f5-waf-tester.png
+
 .. toctree::
    :maxdepth: 1
    :glob:
