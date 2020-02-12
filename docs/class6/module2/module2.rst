@@ -3,6 +3,14 @@ Module 2: Policy testing - Intro to f5 WAF Tester
 
 Expected time to complete: **30 minutes**
 
+**Intro**
+
+In this lab, we will cover the following:
+
+-Install the f5 WAF tester tool
+-Configure the tool and run it against the Juiceshop web site
+-Remediate the WAF policy so SSRF attacks are blocked
+
 **f5 WAF Tester**
 
 f5 Network's Threat Research Team has created a tool that provides an easy and fast way to integrate security testing as part of the SDLC process for basic application protection health check before moving to production.

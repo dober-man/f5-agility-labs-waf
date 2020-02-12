@@ -15,7 +15,7 @@ Then execute:
 	
 .. code-block:: bash
 
-	./f5-waf-tester –init
+	./f5-waf-tester –init -c .
 
 Note: there are two dashes before init
 
