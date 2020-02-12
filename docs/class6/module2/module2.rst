@@ -10,7 +10,7 @@ The tool is intended to test the WAF configuration state and its provided securi
 
 **Disclaimer**: The tool is not testing whether the application itself is vulnerable and also tests only a subset of attacks. The tool tries to test the WAF security policy level, and is not a replacement for a vulnerability scanner assessment.
 
-If after Agility you would like to use the f5 WAF tester, you can find the repoository here:
+If you would like to see the GitHub repository for the tester, it can be found here:
 
 https://github.com/f5devcentral/f5-waf-tester
 
