@@ -12,11 +12,11 @@ We will look through the report of the f5 WAF tester to see if any SSRF attacks 
 2.3.1 - Review f5 WAF Tester report
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Look for any failed Server Side Request Forgery
+Look for any failed Server Side Request Forgery.
 
-	To quickly search the report we will issue a simple jq command.
+To quickly search the report we will issue a simple jq command.
 
-		From the Terminal type (make sure you are in directory ~/.local/bin): 
+	From the Terminal type (make sure you are in directory ~/.local/bin): 
 
 		.. code-block:: bash
 

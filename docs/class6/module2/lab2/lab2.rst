@@ -23,7 +23,7 @@ The execute:
 
 This will run you through a wizard where you will populate:
 
-	[BIG-IP] Host []: (10.1.1.4)
+	[BIG-IP] Host []: `10.1.1.4'
 		This is the management IP of the Big-IP that is securing your application.
 
 	[BIG-IP] Username []: admin
