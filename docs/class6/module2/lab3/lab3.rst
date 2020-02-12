@@ -53,6 +53,7 @@ With the new settings.
 
 	Click Update.
 
+
 .. image:: images/policy-template.png	
 
 
