@@ -54,7 +54,7 @@ With the new settings.
 	Click Update.
 
 
-.. image:: images/policy-template.png	
+    .. image:: images/policy-template.png	
 
 
 

@@ -1,5 +1,5 @@
 Appendix A: f5 WAF Tester Administrator Guide
-------------------------------------------------
+==============================================
 
 To install on different platforms:
 Ubuntu/Kali 
