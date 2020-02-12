@@ -19,7 +19,7 @@ We will look through the report of the f5 WAF tester to see if any SSRF attacks 
 
 			cat report.json | jq '.details[]| select(.attack_type | contains ("Server Side Request Forgery")) | .attack_type, .results[]'
 
-You should see that one SSRF protection failed due to the attack signature not being in the ASM Policy
+    You should see that one SSRF protection failed due to the attack signature not being in the ASM Policy
 	
 2.3.2 - Modify Policy named base_policy (change staging, enable signatures).
 

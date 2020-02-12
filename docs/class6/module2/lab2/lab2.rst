@@ -11,7 +11,7 @@ application you want to test.
 
 	cd /home/f5student/.local/bin
 
-Then execute:
+2.2.2 - Execute:
 	
 .. code-block:: bash
 
@@ -43,7 +43,7 @@ You can see the config file by typing:
 
 	cat ~/.local/lib/python2.7/site-packages/f5_waf_tester/config/config.json
 
-2.2.2 - You can now run the tool by issuing:
+2.2.3 - You can now run the tool by issuing:
 
 .. code-block:: bash
 

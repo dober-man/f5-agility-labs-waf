@@ -16,14 +16,14 @@ To install Python:
 
 	.. image:: images/terminal.png
 
-Within the terminal type:
+2.1.2 - Within the terminal type:
 
 .. code-block:: bash
 
         sudo apt-get install -y python-pip
 
 
-2.1.2 - Once Python is installed, install the tool using the following command:
+2.1.3 - Once Python is installed, install the tool using the following command:
 
 .. code-block:: bash
 

@@ -7,9 +7,9 @@ Expected time to complete: **30 minutes**
 
 In this lab, we will cover the following:
 
--Install the f5 WAF tester tool
--Configure the tool and run it against the Juiceshop web site
--Remediate the WAF policy so SSRF attacks are blocked
+- Install the f5 WAF tester tool
+- Configure the tool and run it against the Juiceshop web site
+- Remediate the WAF policy so SSRF attacks are blocked
 
 **f5 WAF Tester**
 
