@@ -5,13 +5,16 @@ To run the f5 WAF tester tool, a configuration file needs to be populated to spe
 an account to log into the f5 instance to look at logs, name of the ASM policy to see why attacks are getting through, and the URL of the 
 application you want to test.
 
-2.2.1 - To populate the configuration file, use the Terminal and go to f5 waf tester directory .  
+2.2.1 - Initial Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To populate the configuration file, use the Terminal and go to f5 waf tester directory .  
 
 .. code-block:: bash
 
 	cd /home/f5student/.local/bin
 
-2.2.2 - Execute:
+The execute:
 	
 .. code-block:: bash
 
@@ -21,7 +24,7 @@ Note: there are two dashes before init
 
 This will run you through a wizard where you will populate:
 
-	[BIG-IP] Host []: 10.1.1.4
+	[BIG-IP] Host []: (10.1.1.4)
 		This is the management IP of the Big-IP that is securing your application.
 
 	[BIG-IP] Username []: admin
@@ -43,7 +46,10 @@ You can see the config file by typing:
 
 	cat ~/.local/lib/python2.7/site-packages/f5_waf_tester/config/config.json
 
-2.2.3 - You can now run the tool by issuing:
+2.2.3 - Run the tool
+~~~~~~~~~~~~~~~~~~~~~
+
+You can now run the tool by issuing:
 
 .. code-block:: bash
 
