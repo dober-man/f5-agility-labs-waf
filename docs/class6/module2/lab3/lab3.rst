@@ -9,9 +9,12 @@ cost the company $100 to $150 million dollars in the near term.
 
 We will look through the report of the f5 WAF tester to see if any SSRF attacks failed.
 
-2.3.1 - Look for any failed Server Side Request Forgery
+2.3.1 - Review f5 WAF Tester report
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	a.	To quickly search the report we will issue a simple jq command.
+Look for any failed Server Side Request Forgery
+
+	To quickly search the report we will issue a simple jq command.
 
 		From the Terminal type (make sure you are in directory ~/.local/bin): 
 
@@ -21,25 +24,34 @@ We will look through the report of the f5 WAF tester to see if any SSRF attacks 
 
     You should see that one SSRF protection failed due to the attack signature not being in the ASM Policy
 	
-2.3.2 - Modify Policy named base_policy (change staging, enable signatures).
+2.3.2 - Modify WAF Policy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	a.	Enable SSRF signatures
+Modify Policy named base_policy (change staging, enable signatures).
+
+    Enable SSRF signatures
    
-2.3.3 -	Run the f5 WAF tester again to make sure the SSRF attacks are stopped.
+2.3.3 -	Run the f5 WAF Tester Again 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    a. From the report you should now see that the signature is in staging.  
+To make sure the SSRF attacks are stopped.
+
+    From the report you should now see that the signature is in staging.  
     
-    b. Disable staging and run the test again.
+    Disable staging and run the test again.
 
-2.3.4 -	Update the Security Template with the new settings.
+2.3.4 -	Update the Security Template
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	a.	Go to Security -> Options -> Application Security -> Advanced Configuration -> Policy Templates.
+With the new settings.
 
-	b.	Click on owasptop10 template
+    Go to Security -> Options -> Application Security -> Advanced Configuration -> Policy Templates.
 
-	c.	Under the Template File line, choose “Use existing security policy” and select the policy you just modified.
+	Click on owasptop10 template
 
-	d.	Click Update.
+	Under the Template File line, choose “Use existing security policy” and select the policy you just modified.
+
+	Click Update.
 
 .. image:: images/policy-template.png	
 

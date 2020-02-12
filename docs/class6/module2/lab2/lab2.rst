@@ -20,7 +20,6 @@ The execute:
 
 	./f5-waf-tester –init -c .
 
-Note: there are two dashes before init
 
 This will run you through a wizard where you will populate:
 
