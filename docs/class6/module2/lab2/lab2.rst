@@ -7,17 +7,17 @@ application you want to test.
 
 2.2.1 - To populate the configuration file, use the Terminal and go to f5 waf tester directory .  
 
-	cd /home/f5student/.local/bin
-
-	Then execute:
-	./f5_waf_tester --init 
-
-	Note: there are two dashes before init
-
 .. code-block:: bash
 
-	  cd /home/f5student/.local/bin
-      ./f5-waf-tester –init
+	cd /home/f5student/.local/bin
+
+Then execute:
+	
+.. code-block:: bash
+
+	./f5-waf-tester –init
+
+Note: there are two dashes before init
 
 This will run you through a wizard where you will populate:
 

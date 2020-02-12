@@ -8,7 +8,11 @@ Lab 2.1: Installation of f5's WAF Tester
 
 To install Python:
 
-2.1.1 - Log into the Ubuntu client (client01 - username/password f5student/f5DEMOs4u!) and open a terminal.
+2.1.1 - Log into the Linux client via RDP using the following credentials and open the Terminal application:
+
+        Username: f5student
+        
+        Password: f5DEMOs4u!
 
 	.. image:: images/terminal.png
 
