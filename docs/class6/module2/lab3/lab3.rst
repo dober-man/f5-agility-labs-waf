@@ -45,15 +45,21 @@ To make sure the SSRF attacks are stopped.
 
 With the new settings.
 
-    Go to Security -> Options -> Application Security -> Advanced Configuration -> Policy Templates.
+    Go to Security >> Options : Application Security : Advanced Configuration : Policy Templates.
 
-	Click on owasptop10 template
+    .. image:: images/policy-template.png
+
+	Go to the last page and click on owasptop_10_agility template
+
+    .. image:: images/owasptop_10_agility.png
 
 	Under the Template File line, choose “Use existing security policy” and select the policy you just modified.
 
+        .. image:: images/policy_template.png
+
 	Click Update.
 
-    .. image:: images/policy-template.png	
+	
 
 
 
