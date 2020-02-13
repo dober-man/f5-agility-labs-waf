@@ -18,7 +18,7 @@ The execute:
 	
 .. code-block:: bash
 
-	./f5-waf-tester –init -c .
+	./f5-waf-tester --init
 
 
 This will run you through a wizard where you will populate:
