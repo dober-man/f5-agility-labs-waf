@@ -1,15 +1,6 @@
 Lab 1.4: Deploying to secops testing environment 
 =========================================
 
-1.4.1 review as3 declaration 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-1.4.2 deploy using AS3 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-1.4.3 review the created items on the bigip
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Now that we have a template created, we’re now done with the BIG-IP for now and are moving onto Postman.  
 Postman will be interacting with our BIG-IP via AS3 making API calls.  
