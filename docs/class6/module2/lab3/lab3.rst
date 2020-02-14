@@ -1,4 +1,4 @@
-Lab 2.3: Remediate ASM Policy to Pass WAF Tester
+Lab 2.3: Verify ASM Policy with f5 WAF Tester
 =====================================================
 
 According to sources, Capital One suffered a data breach which was announced in late July of 2019.  
