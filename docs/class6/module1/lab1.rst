@@ -83,5 +83,6 @@ Let’s create an AWAF base policy that we’ll reference later, by navigating t
 
         .. image:: images/7-module1.png
 
+        
         Click ‘Save’ at the bottom of this screen to save our changes.
 
