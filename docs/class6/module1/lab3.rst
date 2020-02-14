@@ -73,4 +73,11 @@ Launch Postman from the Linux desktop icon shown below:
 
                 .. image:: images/18-module1.png
 
-            This ends module 1.
+**Review of Module 1**
+
+In this module we reviewed how to manually create an ASM template in the BIG-IP to use for various automation tasks.  The first task was to create the template with a base configuration with a few settings like blocking a geo location, and modifying HTTP protocol compliance settings.
+We then used Visual Studio Code to review some pre-configured JSON files that we imported into the BIG-IP to create ASM policies for us.  This moved us further along the automation path by importing files to the BIG-IP for ASM policy creation rather than building them manually in the 
+BIG-IP.  
+
+Next we used Postman to interact with the BIG-IP and push our ASM JSON calling AS3 on the BIG-IP to fully automate the creation of ASM policies.  
+ 
