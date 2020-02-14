@@ -2,7 +2,7 @@ Lab 1.2: Creation of an AWAF template
 =========================================
 
 
-1.2.1 Save policy as a template 
+**1.2.1 Save policy as a template**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     **1.**	We’re now going to save this policy as a template.  To do so, navigate to:
