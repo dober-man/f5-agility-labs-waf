@@ -59,7 +59,7 @@ Lab 1.3: Creation of ASM Policies via Importing JSON Files
 
         'secops_waf_policy_2'
 
-        .. image:: images/Lab2-9.png
+        .. image:: images/Lab2-10.png
 
     
 
