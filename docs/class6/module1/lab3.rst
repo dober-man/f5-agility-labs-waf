@@ -79,5 +79,5 @@ In this module we reviewed how to manually create an ASM template in the BIG-IP 
 We then used Visual Studio Code to review some pre-configured JSON files that we imported into the BIG-IP to create ASM policies for us.  This moved us further along the automation path by importing files to the BIG-IP for ASM policy creation rather than building them manually in the 
 BIG-IP.  
 
-Next we used Postman to interact with the BIG-IP and push our ASM JSON calling AS3 on the BIG-IP to fully automate the creation of ASM policies.  
- 
+Next we used Postman to interact with the BIG-IP and push our ASM JSON files calling AS3 on the BIG-IP to fully automate the creation of ASM policies.  
+
