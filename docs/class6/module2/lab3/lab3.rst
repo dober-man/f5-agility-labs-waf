@@ -22,42 +22,9 @@ To quickly search the report we will issue a simple jq command.
 
 			cat report.json | jq '.details[]| select(.attack_type | contains ("Server Side Request Forgery")) | .attack_type, .results[]'
 
-    You should see that one SSRF protection failed due to the attack signature not being in the ASM Policy
+    You should see that both SSRF protections passed, and that your policy will thwart an attack like Capital One experienced.
 	
-2.3.2 - Modify WAF Policy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Modify Policy named base_policy (change staging, enable signatures).
-
-    Enable SSRF signatures
-   
-2.3.3 -	Run the f5 WAF Tester Again 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To make sure the SSRF attacks are stopped.
-
-    From the report you should now see that the signature is in staging.  
-    
-    Disable staging and run the test again.
-
-2.3.4 -	Update the Security Template
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-With the new settings.
-
-    Go to Security >> Options : Application Security : Advanced Configuration : Policy Templates.
-
-    .. image:: images/policy-template.png
-
-	Go to the last page and click on owasptop_10_agility template
-
-    .. image:: images/owasptop_10_agility.png
-
-	Under the Template File line, choose “Use existing security policy” and select the policy you just modified.
-
-        .. image:: images/policy_template.png
-
-	Click Update.
+.. image:: images/report.png
 
 	
 
