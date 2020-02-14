@@ -4,7 +4,7 @@ Lab 1.1: Creation of an AWAF base policy
 We’re going to be working in the BIG-IP to create an ASM template with some specific settings applied that we can use on our VS.  
 Once the template is created, we’ll use AS3 and Postman to add an ASM policy to a VS based on our template to show how to add automation of ASM policies to applications.  
 
-3.1.1 Open RDP to the Client linux
+1.1.1 Open RDP to the Client linux
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Log into the Linux Client via RDP using the following credentials:
@@ -15,7 +15,7 @@ Log into the Linux Client via RDP using the following credentials:
 
 .. image:: images/1-module1.png
 
-3.1.2 Log into the BIG-IP
+1.1.2 Log into the BIG-IP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Log into the BIG-IP by opening the FireFox browser in the Linux client and selecting the browser bookmark titled ‘bigip01’ using the following credentials:
@@ -26,7 +26,7 @@ Log into the BIG-IP by opening the FireFox browser in the Linux client and selec
 
         .. image:: images/2-module1.png
 
-3.1.3 Create a policy 
+1.1.3 Create a policy 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Let’s create an AWAF base policy that we’ll reference later, by navigating to:
@@ -37,7 +37,7 @@ Let’s create an AWAF base policy that we’ll reference later, by navigating t
 
             .. image:: images/3-module1.png
 
-3.1.4 Configure policy properties
+1.1.4 Configure policy properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     	Name the policy 'base_policy' and set the following settings:
@@ -61,7 +61,7 @@ Let’s create an AWAF base policy that we’ll reference later, by navigating t
 
             Click ‘Save’ to save the policy
 
-3.1.5 Block traffic from north korea
+1.1.5 Block traffic from north korea
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     Navigate to:  Security  ››  Application Security : Geolocation Enforcement
