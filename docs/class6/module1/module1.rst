@@ -14,8 +14,9 @@ also think about how you can test your policy. since it's not going to be deploy
 **In this lab, we will cover the following:**
 
 - Creation of an AWAF base policy (lab1) 
-- Creating a template from a base policy (lab2)
-- Deploying to a 'secops testing' environemnt (lab3) 
+- Creation of ASM Policies via Importing JSON Files (lab2)
+- Creating a template from a base policy (lab3)
+- Deploying to a 'secops testing' environemnt (lab4) 
 
 
 .. toctree::
