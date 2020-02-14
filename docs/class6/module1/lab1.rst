@@ -50,9 +50,7 @@ Let’s create an AWAF base policy that we’ll reference later, by navigating t
 
         Auto-Added Signature Accuracy:	                    Medium
 
-        Signature Staging:                                  Enabled
-
-        Enforcement Readiness Period:	                    7
+        Signature Staging:                                  Disabled
 
         Policy is Case Sensitive:	                        Disabled
 
