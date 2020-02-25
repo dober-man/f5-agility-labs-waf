@@ -3,11 +3,13 @@ Appendix A: f5 WAF Tester Administrator Guide
 
 To install on different platforms:
 Ubuntu/Kali 
-.. code-block:: bash
+
+        .. code-block:: bash
         
         sudo apt-get install -y python-pip
 Fedora
-.. code-block:: bash
+
+        .. code-block:: bash
 
         sudo dnf install -y python-pip
 
