@@ -14,7 +14,7 @@ Lab 1.3: Creation of ASM Policies via Importing JSON Files
 
 .. image:: images/Lab2-3.png
 
-**1.**  Copy and paste the declaration to import into the BIG-IP.
+**1.**  Import into the BIG-IP.
 
 **2.**  Navigate to 'Security  ››  Application Security : Security Policies : Policies List'
 
@@ -49,7 +49,7 @@ Lab 1.3: Creation of ASM Policies via Importing JSON Files
 **b.** Notice that the declaration is identical to the 'secops_waf_policy_1.json' file with some modifications.  In this declaration,
 you'll notice that the change is to allow the '403' response code in the ASM policy at the bottom.
 
-**c.** Copy and paste the declaration and import into the BIG-IP following the same steps previously used in step 1.3.4 above.
+**c.** Import into the BIG-IP following the same steps previously used in step 1.3.4 above.
 
 **1.3.6** You'll now see two polices called:
 

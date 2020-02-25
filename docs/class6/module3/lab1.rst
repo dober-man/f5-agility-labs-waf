@@ -34,7 +34,7 @@ Then click on :guilabel:`Run pipeline`
 .. image:: images/run_pipeline_button.png
 
 
-3.1.3 Pipeline progress
+3.1.3 Pipeline progress and fail (about 2-3 minutes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Watch the pipeline as it progresses through its stages. You can see the output of individual stage by clicking on corresponding Job in the pipeline.
@@ -76,7 +76,7 @@ AWAF generates suggestions based on the 'policy builder'.when working with AWAF 
 
 1. Open the bigip GUI :guilabel:`firefox` -> :guilabel:`bigip01`
 2. Navigate to 'traffic learning' :guilabel:`security` -> :guilabel:`application security` -> :guilabel:`policy building` -> :guilabel:`traffic learning`
-3. Verify that you are looking at :guilabel:`juiceshop_waf_policy_staging` policy
+3. Verify that you are looking at :guilabel:`juiceshop_waf_policy_staging` policy under the :guilabel:`staging` partition
 4. review the suggestions
 
 Question - why did the request to http://10.1.10.150/ftp/packages.json was blocked ? what is the required policy change ? 

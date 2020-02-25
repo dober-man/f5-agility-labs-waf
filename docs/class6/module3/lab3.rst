@@ -30,8 +30,12 @@ More on tagging at |git|
 
             <a href="https://dev.to/mostlyjason/intro-to-deployment-strategies-blue-green-canary-and-more-3a3" target="_blank">Intro to deployment strategies</a>
 
-3.3.2 Tag the repo
+3.3.2 Tag the repo in gitlab
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+:guilabel:`client RDP` -> :guilabel:`firefox` -> :guilabel:`waf-342` -> :guilabel:`GitLab`
+
+Click on :guilabel:`waflabs / waf_cicd` Project
 
 Navigate to :guilabel:`Repository` -> :guilabel:`Tags` and click on :guilabel:`New tag`
 
@@ -49,12 +53,10 @@ Fill out a **Tag name** field and click on :guilabel:`Create tag`. You can use *
 Navigate to :guilabel:`CI / CD` -> :guilabel:`Pipelines` and click on the pipeline that is currently running and has a **Commit** message set to a Tag name created in previous step
 
 
-.. image:: images/prod_pipeline.png
-
 3.3.4 Connect to Production Juice-Shop App
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Upon successful pipeline completion you can access Juice-Shop App by selecting :guilabel:`firefox` --> :guilabel:`favorites` --> :guilabel:`WAF-342` --> :guilabel:`OWASP juice shop - PRODUCTION`
+Upon successful pipeline completion you can access Juice-Shop App by selecting :guilabel:`firefox` --> :guilabel:`favorites` --> :guilabel:`WAF-342` --> :guilabel:`Production` --> :guilabel:`OWASP juice shop - PRODUCTION`
 
 
 Pipeline Summary

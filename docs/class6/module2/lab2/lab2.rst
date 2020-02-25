@@ -81,7 +81,7 @@ Passed test:
 Summary:
 		"summary": {
 
-    		"fail": 29, 
+    		"fail": 13, 
 
-    		"pass": 19
+    		"pass": 35
 
