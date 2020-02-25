@@ -82,7 +82,7 @@ Click on :guilabel:`Commit changes` radio button
 3.2.4 Merge dev to master and run staging CI/CD pipeline
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Create a new merge request by clicking on a corresponding radio button. Then scroll down to the botton of the page and click :guilabel:`Submit merge request`
+Create a new merge request by clicking on :guilabel:`Create merge request` Then scroll down to the botton of the page and click :guilabel:`Submit merge request`
 
 .. image:: images/submit_merge_request.png
 
@@ -121,9 +121,10 @@ in the client linux terminal:
 
 Since we applied an updated WAF Policy, it now allows trusted traffic to pass through. 
 
-Now we should ensure that malicious traffic is blocked by WAF by running a **malicious_traffic.sh** script from citools VM.
+Now we should ensure that malicious traffic is blocked by WAF by running a malicious_traffic
 
 .. note:: The pipeline uses 4 different requests that simulate cross-site scripting, access to FTP directory, login and password "guessing" attempts. This is just an example. In real customer environment these tests will be much more comprehensive and may include a 3rd party software designed for penetration testing.
+
 
     .. code-block:: console
     
@@ -140,7 +141,7 @@ Pipeline jobs reported the same result so it's time to test the connectivity to 
 3.2.7 Staging Juice-Shop App
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Upon successful pipeline completion you can access Juice-Shop App by selecting :guilabel:`firefox` --> :guilabel:`favorites` --> :guilabel:`WAF-342` --> :guilabel:`OWASP juice shop`
+Upon successful pipeline completion you can access Juice-Shop App by selecting :guilabel:`firefox` --> :guilabel:`favorites` --> :guilabel:`WAF-342` --> :guilabel:`Staging` --> :guilabel:`OWASP juice shop`
 
 .. image:: images/juiceshop_staging.png
 

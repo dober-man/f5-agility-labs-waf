@@ -4,7 +4,7 @@ Class 6: AWAF class 6 - WAF in a CI/CD pipeline
 Intro
 ======================================
 
-Welcome to F5's Agility Labs, 2020 edition! This class will focus on how to integrate F5 AWAF inside a CI/CD pipeline. 
+Welcome to F5's Agility Labs, 2020 edition! This class will focus on how to integrate F5 AWAF into a CI/CD pipeline. 
 
 By the end of this lab you should be able to:
 
@@ -82,7 +82,7 @@ New feature in 15.1 allows AWAF to use outgoing webhooks to send notifications t
 Webhooks are defined explicitly inside the AWAF policy and can be triggered by a number of different events. Notification messages are configurable and may contain various useful information about the event. AS it applies to AWAF, notification message can be sent when the policy has been applied, or a security event has been observed:
 
 
-Webhooks are not used in this lab
+**Webhooks are not used in this lab**
 
 
 Lab structure

@@ -1,4 +1,4 @@
-Module 3: Pipeline integration 
+Module 3: Pipeline integration (SRE) 
 ===============================================================
 Expected time to complete: **20 minutes**
 

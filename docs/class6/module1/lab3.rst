@@ -1,76 +1,72 @@
-Lab 1.3: Deploying to secops testing environment 
+Lab 1.3: Creation of ASM Policies via Importing JSON Files
 =========================================
 
-1.3.1 review as3 declaration 
+
+**1.3.1** Open Visual Studio Code by clicking on the icon shown below:
+
+.. image:: images/Lab2-1.png
+
+**1.3.2** Once Visual Studio Code is open, you'll see a collection on the left titled 'UDF_WAF_CICD' with several items underneath:
+
+.. image:: images/Lab2-2.png
+
+**1.3.4** Click on 'secops_waf_policy_1.json' and review the configuration of the file. 
+
+.. image:: images/Lab2-3.png
+
+**1.**  Import into the BIG-IP.
+
+**2.**  Navigate to 'Security  ››  Application Security : Security Policies : Policies List'
+
+**a.**  click on the '...' next to 'Create' and select 'Import Policy':
+
+.. image:: images/Lab2-4.png
+
+**b.**  Navigate to the Desktop and select the 'waf342' folder
+
+.. image:: images/Lab2-5.png
+        
+**c.**  Select the 'udf_waf_cicd' folder:
+
+.. image:: images/Lab2-6.png
+
+**d.**  Select the 'secops_waf_polic_1.json' file and select 'Open' in the BIG-Ip:
+
+.. image:: images/Lab2-7.png
+        
+**e.** Select 'Import'
+
+.. image:: images/Lab2-8.png
+        
+**f.** You'll now see a policy imported called 'secops_waf_policy'.
+
+**1.3.5** Return to Visual Studio Code and select the 'secops_waf_policy_2.json'
+
+**a.** Review the declaration:
+
+.. image:: images/Lab2-9.png
+
+**b.** Notice that the declaration is identical to the 'secops_waf_policy_1.json' file with some modifications.  In this declaration,
+you'll notice that the change is to allow the '403' response code in the ASM policy at the bottom.
+
+**c.** Import into the BIG-IP following the same steps previously used in step 1.3.4 above.
+
+**1.3.6** You'll now see two polices called:
+
+'secops_waf_policy'
+
+and
+
+'secops_waf_policy_2'
+
+.. image:: images/Lab2-10.png
+
+    
+
+
+
+
+
+
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-1.3.2 deploy using AS3 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-1.3.3 review the created items on the bigip
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-**Step 4:** Now that we have a template created, we’re now done with the BIG-IP for now and are moving onto Postman.  
-Postman will be interacting with our BIG-IP via AS3 making API calls.  
-Launch Postman from the Linux desktop icon shown below:
-
-        .. image:: images/10-module1.png
-
-    **4a.** Once Postman is open, we need to import the collection (series of declarations we’ll be using on our BIG-IP) from GitHub.  To do so, click on ‘Import’ on the top left of Postman and select ‘Import From Link’ option.  Paste the following into the field where you enter the URL and click ‘Import’
-
-        https://gitlab.com/f5-examples/udf_waf_cicd/-/raw/master/WAF_342_postman_collection.json?inline=false 
-
-        .. image:: images/11-module1.png
-
-        With the collection imported, on the left-hand pane of Postman, you’ll see the collection titled ‘WAF_342’ with several declarations under it:
-
-        .. image:: images/12-module1.png
-
-        The first collection does a simple GET request against the lab BIG-IP to ensure that AS3 is installed and running.  
-        It will also show you the version of AS3. 
-
-        Click on the selection ‘check if AS3 is ready’ and click ‘Send’.  You should see the BIG IP report back with the following:
-
-        .. image:: images/13-module1.png
-
-        This validates that AS3 is running and responded with version 3.16.0
-
-**Step 5:** We’re now going to make an AS3 declaration to the BIG-IP.  To view the JSON declaration, click on the declaration titled ‘as3 with_declarative_waf_and_vs’ and select ‘Body’ and ‘raw” as shown below:
-
-    .. image:: images/14-module1.png
-
-    In this declaration, we’re going to be creating a new Virtual Server on the BIG-IP, creating an ASM policy by referencing the template created earlier and applying it to the new Virtual Server. This virtual server front-ends a pool member that is running OWASP’s Juice Shop application that has all of the OWASP top 10 vulnerabilities.  
-
-    Also note that the declaration is calling an external URL hosted on Gitlab and is our WAF JSON declaration that will be creating all of the configuration items mentioned above.  If you’d like, you can view the JSON declaration by using the bookmark bar in FireFox on the Linux Desktop and clicking on the ‘WAF_342’ Bookmark folder and clicking on ‘Gitlab’.  The following screen appears:
-
-        .. image:: images/15-module1.png
-
-    **5a.** Click on ‘waf_labs / waf_cicd’ and at the bottom of the page you’ll see ‘waf_policy.json’.  Click on that to view the JSON file:
-
-        **Note in the top section you’ll see the name “owasptop10’.  This refers to the template we created on the BIG-IP to build the ASM policy and matches the name of the template we created in the BIG-IP.
-
-        .. image:: images/16-module1.png
-
-    **5b.** Return to Postman and run the declaration titled ‘as3_with_declarative_waf_VS_create’ by clicking ‘Send’ on the far right of the screen.  If it finished successfully, you’ll see the following response from the BIG-IP in Postman.
-
-        .. image:: images/17-module1.png
-
-    **5c.** Validate that the ASM policy has been created via the previous step by logging into the BIG-IP with the following credentials.  
-
-        Username:	admin
-		Password:	f5DEMOs4u!
-
-		Once logged in, go to: 
-
-            Security  ››  Application Security : Security Policies : Policies List
-	
-            There you’ll see the policy titled ‘waf_juiceshop_secops_testing’ under the newly created ‘secops_testing’ partition:
-
-                .. image:: images/18-module1.png
-
-            This declaration also created a VS on the BIG-IP called ‘juiceshop_secops_testing’ with the security policy ‘waf_juiceshop_secops_testing’ WAF policy applied.
-
-                .. image:: images/18-module1.png
-
-            This ends module 1.
