@@ -5,11 +5,13 @@ To install on different platforms:
 Ubuntu/Kali 
 
         .. code-block:: bash
-        sudo apt-get install -y python-pip
+        
+                sudo apt-get install -y python-pip
 Fedora
 
         .. code-block:: bash
-        sudo dnf install -y python-pip
+        
+                sudo dnf install -y python-pip
 
 More information can be observed by clicking f5-waf-tester --help
 usage: f5-waf-tester [-h] [-v] [-i] [-c CONFIG] [-t TESTS] [-r REPORT]
