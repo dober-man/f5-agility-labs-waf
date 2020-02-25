@@ -44,15 +44,15 @@ Let’s create an AWAF base policy that we’ll reference later, by navigating t
 
 Name the policy 'base_policy' and set the following settings:
 
-| Property                       | Value          
-| -------------                  |:-------------:
-| policy Name:                   | right-aligned 
-| Policy Template:               | Rapid Deployment Policy    
-| Enforcement Mode:              | Blocking    
-| Auto-Added Signature Accuracy: | Medium 
-| Signature Staging:             | Disabled
-| Policy is Case Sensitive:      | Disabled
-| Differentiate between HTTP/WS and HTTPS/WSS URLs:      | Disabled  
+ Property                                                Value          
+ --------------------------------------------------------------------------        
+ policy Name:                                            right-aligned 
+ Policy Template:                                        Rapid Deployment Policy    
+ Enforcement Mode:                                       Blocking    
+ Auto-Added Signature Accuracy:                          Medium 
+ Signature Staging:                                      Disabled
+ Policy is Case Sensitive:                               Disabled
+ Differentiate between HTTP/WS and HTTPS/WSS URLs:       Disabled  
 
 
 .. image:: images/4-module1.png
