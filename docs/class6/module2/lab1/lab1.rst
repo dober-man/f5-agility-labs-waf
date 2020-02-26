@@ -25,6 +25,8 @@ Log into the Linux client via RDP using the following credentials and open the T
 
 Within the terminal type:
 
+Password for 'sudo': f5DEMOs4u!
+
 .. code-block:: bash
 
         sudo apt-get install -y python-pip

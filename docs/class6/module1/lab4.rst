@@ -9,6 +9,8 @@ Launch Postman from the Linux desktop icon shown below:
         .. image:: images/10-module1.png
 
     **1.4.1** Once Postman is open, we need to import the collection (series of declarations we’ll be using on our BIG-IP) from GitHub.  To do so, click on ‘Import’ on the top left of Postman and select ‘Import From Link’ option.  Paste the following into the field where you enter the URL and click ‘Import’
+    
+    if the collection already exists choose 'replace'
 
         https://gitlab.com/f5-examples/udf_waf_cicd/-/raw/master/WAF_342_postman_collection.json?inline=false 
 
@@ -39,7 +41,7 @@ Launch Postman from the Linux desktop icon shown below:
 
     **1** Click on ‘waf_labs / waf_cicd’ and at the bottom of the page you’ll see ‘waf_policy.json’.  Click on that to view the JSON file:
 
-        **Note in the top section you’ll see the name “owasptop10’.  This refers to the template we created on the BIG-IP to build the ASM policy and matches the name of the template we created in the BIG-IP.
+        **Note in the top section you’ll see the name 'owasptop10_agility2020'.  This refers to the template we created on the BIG-IP to build the ASM policy and matches the name of the template we created in the BIG-IP.
 
         .. image:: images/16-module1.png
 

@@ -20,11 +20,11 @@ Log into the Linux Client via RDP using the following credentials:
 1.1.2 Log into the BIG-IP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Log into the BIG-IP by opening the FireFox browser in the Linux client and selecting the browser bookmark titled ‘bigip01’ using the following credentials:
+Log into the BIG-IP by opening the FireFox browser in the Linux client and selecting the browser bookmark titled :guilabel:`bigip01` using the following credentials:
 
-        Username:	admin
+        Username:	:guilabel:`admin`
     
-        Password:	f5DEMOs4u!
+        Password:	:guilabel:`f5DEMOs4u!` 
 
 .. image:: images/2-module1.png
 
@@ -42,22 +42,27 @@ Let’s create an AWAF base policy that we’ll reference later, by navigating t
 1.1.4 Configure policy properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Name the policy 'base_policy' and set the following settings:
+Name the policy :guilabel:`base_policy` and set the following settings:
+       
+ policy Name:                                            :guilabel:`base_policy` 
 
- Property                                                Value          
- --------------------------------------------------------------------------        
- policy Name:                                            right-aligned 
- Policy Template:                                        Rapid Deployment Policy    
- Enforcement Mode:                                       Blocking    
- Auto-Added Signature Accuracy:                          Medium 
- Signature Staging:                                      Disabled
- Policy is Case Sensitive:                               Disabled
- Differentiate between HTTP/WS and HTTPS/WSS URLs:       Disabled  
+ Policy Template:                                        :guilabel:`Rapid Deployment Policy`   
+
+ Enforcement Mode:                                       :guilabel:`Blocking`     
+
+ Auto-Added Signature Accuracy:                          :guilabel:`Medium`  
+
+ Signature Staging:                                      :guilabel:`Disabled` 
+
+ Policy is Case Sensitive:                               :guilabel:`Disabled` 
+
+ Differentiate between HTTP/WS and HTTPS/WSS URLs:       :guilabel:`Disabled`  
+ 
 
 
 .. image:: images/4-module1.png
 
-**Click ‘Save’ to save the policy**
+**Click :guilabel:`Save` to save the policy**
 
 1.1.5 Block traffic from north korea
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -70,20 +75,20 @@ Name the policy 'base_policy' and set the following settings:
         .. image:: images/5-module1.png
 
 
-        **Click ‘Save’ **
+        **Click :guilabel:`Save` **
 
     Navigate to:  ‘Security  ››  Application Security : Policy Building : Learning and Blocking Settings
 
-        If you expand ‘IP Addresses and Geolocations’ you’ll notice that we’re enforcing blocking of the Geolocation that we created in the previous step as well as access from known malicious IP addresses.
+        If you expand :guilabel:`IP Addresses and Geolocations` you’ll notice that we’re enforcing blocking of the Geolocation that we created in the previous step as well as access from known malicious IP addresses.
 
         .. image:: images/6-module1.png
     
-    On this same screen, under the section ‘HTTP protocol compliance failed’ uncheck the boxes to ‘learn’, ‘alarm’, and ‘block’ as shown below. 
+    On this same screen, under the section :guilabel:`File types` check the boxes on :guilabel:`Illegal file types` to ‘learn’, ‘alarm’, and ‘block’ as shown below. 
 
         .. image:: images/7-module1.png
 
         
-        **Click ‘Save’ at the bottom of this screen to save our changes.**
+        **Click :guilabel:`Save` at the bottom of this screen to save our changes.**
 
-        **Click ‘Apply policy’ at the top right of the screen to save our changes.**
+        **Click :guilabel:`Apply policy` at the top right of the screen to save our changes.**
 

@@ -20,6 +20,7 @@ Click on :guilabel:`waflabs / waf_cicd` Project
 
 .. image:: images/project_wafcicd.png
 
+
 3.1.2 Run Staging Pipeline
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -40,7 +41,7 @@ Then click on :guilabel:`Run pipeline`
 Watch the pipeline as it progresses through its stages. You can see the output of individual stage by clicking on corresponding Job in the pipeline.
 
 It is **expected** that the pipeline will fail for the first time. This is due to the WAF Policy being too strict and not allowing a `Trusted Traffic` through.
-Click on :guilabel:`Functionality tests` Job to see more details about the failure
+Click on :guilabel:`Trusted traffic` Job to see more details about the failure
 
 .. note:: The Functionality tests job sends 3 requests to validate that WAF Policy allows for retrieval of YAML, JSON and .bak extension files, as those are used by users of the app. 
           Original policy uses 'POLICY_TEMPLATE_RAPID_DEPLOYMENT' template which blocks such requests if they are not included in modifications section of the policy.
