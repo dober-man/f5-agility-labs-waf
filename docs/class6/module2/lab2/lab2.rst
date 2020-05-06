@@ -14,7 +14,7 @@ To populate the configuration file, use the Terminal and go to f5 waf tester dir
 
 	cd /home/f5student/.local/bin
 
-The execute:
+Then execute:
 	
 .. code-block:: bash
 
