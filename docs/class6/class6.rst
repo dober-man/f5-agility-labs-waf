@@ -88,7 +88,7 @@ Webhooks are defined explicitly inside the AWAF policy and can be triggered by a
 Lab structure
 -------------
 
-During this lab you will work with |GitLab| CE and utilize SCM and CI/CD pipelines to build, test and deploy |OWASP Juice-Shop| App into a Docker host fronted by BIG-IP AWAF. 
+During this lab you will work with GitLab CE and utilize SCM and CI/CD pipelines to build, test and deploy 'OWASP Juice-Shop' App into a Docker host fronted by BIG-IP AWAF. 
 
 You use AWAF suggestions for trusted traffic to modify WAF policy and re-deploy the app all the way to Production.
 
@@ -101,4 +101,4 @@ You use AWAF suggestions for trusted traffic to modify WAF policy and re-deploy 
    :caption: Contents:
    :glob:
 
-   ../module*/module*
+   module*/module*
