@@ -63,7 +63,7 @@ Explore the policy and pay attention to the **modifications** section. It should
 3.2.3 Update original WAF Policy JSON
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Click on `Copy source to clipboard` button for new_waf_policy.json content and navigate back to root folder of the repo:
+Click on :guilabel:`Copy file contents` button for new_waf_policy.json content and navigate back to root folder of the repo:
 
 On the root folder of the repo open `waf_policy.json` file for editing and perform `CTRL-A/CTRL-C` to paste the content of `new_waf_policy.json` and overwrite the original policy file:
 

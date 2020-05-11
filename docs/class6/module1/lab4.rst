@@ -29,13 +29,13 @@ Launch Postman from the Linux desktop icon shown below:
 
         **4.** This validates that AS3 is running and responded with version 3.16.0
 
-**1.4.2:** We’re now going to make an AS3 declaration to the BIG-IP.  To view the JSON declaration, click on the declaration titled ‘as3 with_declarative_waf_and_vs’ and select ‘Body’ and ‘raw” as shown below:
+**1.4.2:** We’re now going to make an AS3 declaration to the BIG-IP.  To view the JSON declaration, click on the declaration titled **as3 with_declarative_waf_and_vs** and select :guilabel:`Body` and :guilabel:`raw` as shown below:
 
     .. image:: images/14-module1.png
 
     In this declaration, we’re going to be creating a new Virtual Server on the BIG-IP, creating an ASM policy by referencing the template created earlier and applying it to the new Virtual Server. This virtual server front-ends a pool member that is running OWASP’s Juice Shop application that has all of the OWASP top 10 vulnerabilities.  
 
-    Also note that the declaration is calling an external URL hosted on Gitlab and is our WAF JSON declaration that will be creating all of the configuration items mentioned above.  If you’d like, you can view the JSON declaration by using the bookmark bar in FireFox on the Linux Desktop and clicking on the ‘WAF_342’ Bookmark folder and clicking on ‘Gitlab’.  The following screen appears:
+    Also note that the declaration is calling an external URL hosted on Gitlab and is our WAF JSON declaration that will be creating all of the configuration items mentioned above.  If you’d like, you can view the JSON declaration by using the bookmark bar in FireFox on the Linux Desktop and clicking on the ‘WAF_342’ Bookmark folder and clicking on ‘Gitlab’. login with the cached credentials and  The following screen appears:
 
         .. image:: images/15-module1.png
 

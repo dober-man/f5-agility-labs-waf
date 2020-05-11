@@ -12,9 +12,9 @@ By the end of this lab you should be able to:
 
 2. Properly test the template 
 
-3. Enable SRE's to deploy applicaitons using your template 
+3. Enable SRE's to deploy applications using your template 
 
-4. Enable SRE's to make custom changes 
+4. Enable SRE's to make custom changes to the WAF policy
 
 
 In order to successfully complete the lab you should have a basic understanding of some of the DevOps methodologies and tools,
@@ -92,31 +92,7 @@ During this lab you will work with |GitLab| CE and utilize SCM and CI/CD pipelin
 
 You use AWAF suggestions for trusted traffic to modify WAF policy and re-deploy the app all the way to Production.
 
-To learn more about the lab components refer to the corresonding documentation:
 
-.. |GitLab| raw:: html
-
-    <a href="https://about.gitlab.com" target="_blank">GitLab</a>
-
-.. |OWASP Juice-Shop| raw:: html
-
-    <a href="https://www.owasp.org/index.php/OWASP_Juice_Shop_Project" target="_blank">OWASP Juice-Shop</a>
-
-.. |Kubernetes| raw:: html
-
-    <a href="https://kubernetes.io" target="_blank">Kubernetes</a>
-
-
-
-This is the 4th class focused on AWAF. The other 3 classes are based on
-
-Here is a complete listing of all AWAF classes offered at this years agility.
-
-ASM141 - Good WAF Security - Getting started with ASM
-
-ASM241 - Elevated WAF Security - Elevating ASM Protection
-
-ASM341 - High and Maximum WAF Security - Maximizing ASM Protection
 
 
 
@@ -125,4 +101,4 @@ ASM341 - High and Maximum WAF Security - Maximizing ASM Protection
    :caption: Contents:
    :glob:
 
-   module*/module*
+   ../module*/module*
