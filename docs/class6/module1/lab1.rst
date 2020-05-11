@@ -60,7 +60,7 @@ Name the policy :guilabel:`base_policy` and set the following settings:
  
 
 
-**Click **:guilabel:`Save` **to save the policy**
+Click :guilabel:`Save` to save the policy
 
 .. image:: images/4-module1.png
 
@@ -90,7 +90,7 @@ Click :guilabel:`Save` to save the policy
         .. image:: images/7-module1.png
 
         
-        **Click **:guilabel:`Save` **at the bottom of this screen to save our changes.**
+        Click :guilabel:`Save` **at the bottom of this screen to save our changes.
 
-        **Click **:guilabel:`Apply policy` **at the top right of the screen to save our changes.**
+        Click :guilabel:`Apply policy` **at the top right of the screen to save our changes.
 
