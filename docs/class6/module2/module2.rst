@@ -20,7 +20,7 @@ The tool is intended to test the WAF configuration state and its provided securi
 
 .. image:: images/f5-waf-tester.png
 
-**Disclaimer**: The tool is not testing whether the application itself is vulnerable and also tests only a subset of attacks. The tool tries to test the WAF security policy level, and is not a replacement for a vulnerability scanner assessment.
+**Disclaimer**: This tool is not meant for testing whether the application itself is vulnerable and does not replace a DAST or a SAST.  
 
 If you would like to see the GitHub repository for the tester, it can be found here:
 
