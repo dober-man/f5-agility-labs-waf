@@ -1,7 +1,7 @@
 Module 2: Policy testing - Intro to f5 WAF Tester (secops engineer)
 ========================================================
 
-Expected time to complete: **15 minutes**
+Expected time to complete: **10 minutes**
 
 **Intro**
 ~~~~~~~~~~
