@@ -60,7 +60,7 @@ Launch Postman from the Linux desktop icon shown below:
 	
             There you’ll see the policy titled ‘waf_juiceshop_secops_testing’ under the newly created ‘secops_testing’ partition:
 
-            ***Be sure and switch to the 'secops_testing' partition or you will not see the changes.  They're not in the 'commom' partition.
+            ***Be sure and switch to the 'secops_testing' partition or you will not see the changes.  They're not in the 'common' partition.
 
                 .. image:: images/18-module1.png
 
