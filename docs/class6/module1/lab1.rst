@@ -6,7 +6,7 @@ Once the template is created, we’ll use AS3 and Postman to add an ASM policy t
 
 1.1.1 Open RDP to the Client linux
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-**For users with Mac's, as you type the credentials, they won't show up as you type.  Don't worry, just keep typing and login. Just because you don't see them doesn't mean you aren't typing.
+**For users with Mac's, keystrokes won't show as you type.  Don't worry, just keep typing and login. 
 
 Log into the Linux Client via RDP using the following credentials:
 
