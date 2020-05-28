@@ -3,16 +3,17 @@ Lab 3.1: Build, Test and Deploy Juice-shop Web App Staging ENV via Gitlab CI/CD
 
 Staging Pipeline
 ----------------
-we are starting with a staging pipeline that will build the app and deploy it to the staging environment. 
+We are starting with a staging pipeline that will build the app and deploy it to the staging environment. 
 the pipeline is built from the **master** branch. 
-here are the highlevel stages we are going to excetute:
+here are the highlevel stages we are going to execute:
 
 .. image:: images/pipeline_overview.png
 
 3.1.1 Open GitLab
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-in the linux client RDP session open firefox and click gitlab from the waf-342 favorites folder 
+In the linux client RDP session open Firefox and click gitlab from the waf-342 favorites folder 
+#Please fix guilabels
 
 :guilabel:`client RDP` -> :guilabel:`firefox` -> :guilabel:`waf-342` -> :guilabel:`GitLab`
 
@@ -38,9 +39,9 @@ Then click on :guilabel:`Run pipeline`
 3.1.3 Pipeline progress and fail (about 2-3 minutes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Watch the pipeline as it progresses through its stages. You can see the output of individual stage by clicking on corresponding Job in the pipeline.
+Watch the pipeline as it progresses through its stages. You can see the output of individual stages by clicking on the corresponding Job in the pipeline.
 
-It is **expected** that the pipeline will fail for the first time. This is due to the WAF Policy being too strict and not allowing a `Trusted Traffic` through.
+It is **expected** that the pipeline will fail for the first time. This is due to the WAF Policy being too strict and not allowing `Trusted Traffic` through.
 Click on :guilabel:`Trusted traffic` Job to see more details about the failure
 
 .. note:: The Functionality tests job sends 3 requests to validate that WAF Policy allows for retrieval of YAML, JSON and .bak extension files, as those are used by users of the app. 
@@ -80,7 +81,7 @@ AWAF generates suggestions based on the 'policy builder'.when working with AWAF 
 3. Verify that you are looking at :guilabel:`juiceshop_waf_policy_staging` policy under the :guilabel:`staging` partition
 4. review the suggestions
 
-Question - why did the request to http://10.1.10.150/ftp/packages.json was blocked ? what is the required policy change ? 
+Question - Why did the request to http://10.1.10.150/ftp/packages.json get blocked? What is the required policy change? 
 
 .. image:: images/policy_learning.png
 
