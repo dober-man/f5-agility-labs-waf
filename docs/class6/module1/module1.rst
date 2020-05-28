@@ -7,9 +7,9 @@ As the security engineer, you are tasked with building a WAF policy template tha
 
 Since the policy is used by multiple teams, it will mostly contain negative security controls (signatures, ip reputation...) 
 
-During the excersise, think which settings should be enabled and how changes to the template will be managed. 
+During the exercise, think which settings should be enabled and how changes to the template will be managed. 
 
-Also think about how you can test your policy. since it's not going to be deployed by the security engineer. 
+Also, think about how you can test your policy since it's not going to be deployed by the security engineer. 
 
 **In this lab, we will cover the following:**
 
