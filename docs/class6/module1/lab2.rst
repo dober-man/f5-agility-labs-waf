@@ -1,6 +1,6 @@
 Lab 1.2: Creation of an AWAF template 
 =========================================
-
+#Please fix guilabels
 
 **1.2.1 Save policy as a template**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
