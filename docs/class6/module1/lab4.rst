@@ -10,7 +10,7 @@ Launch Postman from the Linux desktop icon shown below:
 
     **1.4.1** Once Postman is open, we need to import the collection (series of declarations we’ll be using on our BIG-IP) from GitHub.  To do so, click on ‘Import’ on the top left of Postman and select ‘Import From Link’ option.  Paste the following into the field where you enter the URL and click ‘Import’
     
-    if the collection already exists choose 'replace'
+.. NOTE:: If the collection already exists choose 'replace'
 
         https://gitlab.com/f5-examples/udf_waf_cicd/-/raw/master/WAF_342_postman_collection.json?inline=false 
 
@@ -28,7 +28,7 @@ Launch Postman from the Linux desktop icon shown below:
         .. image:: images/13-module1.png
 
         **4.** This validates that AS3 is running and responded with version 3.16.0
-
+#Please fix guilabels
 **1.4.2:** We’re now going to make an AS3 declaration to the BIG-IP.  To view the JSON declaration, click on the declaration titled **as3 with_declarative_waf_and_vs** and select :guilabel:`Body` and :guilabel:`raw` as shown below:
 
     .. image:: images/14-module1.png
@@ -41,7 +41,7 @@ Launch Postman from the Linux desktop icon shown below:
 
     **1** Click on ‘waf_labs / waf_cicd’ and at the bottom of the page you’ll see ‘waf_policy.json’.  Click on that to view the JSON file:
 
-        **Note in the top section you’ll see the name 'owasptop10_agility2020'.  This refers to the template we created on the BIG-IP to build the ASM policy and matches the name of the template we created in the BIG-IP.
+.. NOTE:: in the top section you’ll see the name 'owasptop10_agility2020'.  This refers to the template we created on the BIG-IP to build the ASM policy and matches the name of the template we created in the BIG-IP.
 
         .. image:: images/16-module1.png
 
@@ -60,7 +60,7 @@ Launch Postman from the Linux desktop icon shown below:
 	
             There you’ll see the policy titled ‘waf_juiceshop_secops_testing’ under the newly created ‘secops_testing’ partition:
 
-            ***Be sure and switch to the 'secops_testing' partition or you will not see the changes.  They're not in the 'common' partition.
+.. NOTE:: Be sure and switch to the 'secops_testing' partition or you will not see the changes. They're not in the 'common' partition. 
 
                 .. image:: images/18-module1.png
 
