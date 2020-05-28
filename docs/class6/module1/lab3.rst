@@ -46,8 +46,7 @@ Lab 1.3: Creation of ASM Policies via Importing JSON Files
 
 .. image:: images/Lab2-9.png
 
-**b.** Notice that the declaration is identical to the 'secops_waf_policy_1.json' file with some modifications.  In this declaration,
-you'll notice that the change is to allow the '403' response code in the ASM policy at the bottom.
+**b.** Notice that the declaration is identical to the 'secops_waf_policy_1.json' file with some modifications.  In this declaration, you'll notice that the change is to allow the '403' response code in the ASM policy at the bottom.
 
 **c.** Import into the BIG-IP following the same steps previously used in step 1.3.4 above.
 
@@ -64,6 +63,7 @@ and
     
 **1.3.7** Check the policies on the BIGIP and verify that secops_waf_policy_2 has '403' in the allowed response types.
 
+#Please add screenshot for confirmation here
 
 
 
