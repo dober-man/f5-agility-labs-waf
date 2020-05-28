@@ -6,7 +6,7 @@ Once the template is created, we’ll use AS3 and Postman to add an ASM policy t
 
 1.1.1 Open RDP to the Client linux
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-**For users with Mac's, keystrokes won't show as you type.  Don't worry, just keep typing and login. 
+**For users with Mac's, keystrokes won't show as you type.  Don't worry, just keep typing and login.**
 
 Log into the Linux Client via RDP using the following credentials:
 
@@ -14,7 +14,7 @@ Log into the Linux Client via RDP using the following credentials:
 
 	Password: 	f5DEMOs4u!
 
-.. note:: Copy/Paste doesn't work in XRDP.
+.. NOTE:: Copy/Paste doesn't work in XRDP.
 
 .. image:: images/1-module1.png
 
@@ -43,6 +43,8 @@ Let’s create an AWAF base policy that we’ll reference later, by navigating t
 1.1.4 Configure policy properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#Please fix all guilabel tags below. They are not rendering correctly in the remainder of this file
+
 Name the policy :guilabel:`base_policy` and set the following settings:
        
  policy Name:                                            :guilabel:`base_policy` 
@@ -67,7 +69,7 @@ Click :guilabel:`Save` to save the policy
 
 Click :guilabel:`Save` to save the policy
 
-1.1.5 Block traffic from north korea
+1.1.5 Block traffic from North Korea
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     Navigate to:  Security  ››  Application Security : Geolocation Enforcement
